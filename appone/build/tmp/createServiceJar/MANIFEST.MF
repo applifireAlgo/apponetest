@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Copyright: Copyright (c)    2015
+<<<<<<< HEAD
+Build-Date: Sat Apr 02 06:43:10 UTC 2016
+=======
+Build-Date: Fri Apr 01 14:53:21 UTC 2016
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
+version: 1.0
+
