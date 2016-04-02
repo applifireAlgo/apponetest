@@ -1,0 +1,3 @@
+CREATE TABLE ast_PasswordAlgo_M ( algoId VARCHAR2(64)  NOT NULL, algorithm NUMBER(11)  NOT NULL, algoName VARCHAR2(256)  NOT NULL, algoDescription VARCHAR2(256)  DEFAULT NULL, algoIcon VARCHAR2(64)  DEFAULT NULL, algoHelp VARCHAR2(256)  DEFAULT NULL, createdBy VARCHAR2(64)  DEFAULT '-1', createdDate TIMESTAMP  DEFAULT '11-nov-01', updatedBy VARCHAR2(64)  DEFAULT '-1', updatedDate TIMESTAMP  DEFAULT '11-nov-01', versionId NUMBER(11)  DEFAULT '-1', activeStatus NUMBER(1)  DEFAULT '1', txnAccessCode NUMBER  DEFAULT NULL, PRIMARY KEY (algoId));
+
+exit;

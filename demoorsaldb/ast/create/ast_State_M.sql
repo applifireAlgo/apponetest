@@ -1,0 +1,3 @@
+CREATE TABLE ast_State_M ( stateId VARCHAR2(64)  NOT NULL, countryId VARCHAR2(64)  NOT NULL, stateName VARCHAR2(256)  NOT NULL, stateCode NUMBER(2)  DEFAULT NULL, stateCodeChar2 VARCHAR2(32)  NOT NULL, stateCodeChar3 VARCHAR2(32)  DEFAULT NULL, stateDescription VARCHAR2(256)  DEFAULT NULL, stateFlag VARCHAR2(128)  DEFAULT NULL, stateCapital VARCHAR2(128)  DEFAULT NULL, stateCapitalLatitude NUMBER(11)  DEFAULT NULL, stateCapitalLongitude NUMBER(11)  DEFAULT NULL, createdBy VARCHAR2(64)  DEFAULT '-1', createdDate TIMESTAMP  DEFAULT '11-nov-01', updatedBy VARCHAR2(64)  DEFAULT '-1', updatedDate TIMESTAMP  DEFAULT '11-nov-01', versionId NUMBER(11)  DEFAULT '-1', activeStatus NUMBER(1)  DEFAULT '1', txnAccessCode NUMBER  DEFAULT NULL, PRIMARY KEY (stateId));
+
+exit;

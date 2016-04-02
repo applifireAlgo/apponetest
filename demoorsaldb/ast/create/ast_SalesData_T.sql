@@ -1,0 +1,5 @@
+CREATE TABLE ast_SalesData_T ( autoid NUMBER(10)  NOT NULL, channelId VARCHAR2(64)  NOT NULL, reatilercode VARCHAR2(64)  NOT NULL, retailername VARCHAR2(64)  DEFAULT NULL, salesdate DATE  NOT NULL, salesmonth NUMBER(10)  NOT NULL, salesyear NUMBER(10)  NOT NULL, salesinvoicenbr VARCHAR2(64)  NOT NULL, materialdesc VARCHAR2(64)  DEFAULT NULL, branddesc VARCHAR2(64)  DEFAULT NULL, salesqty BINARY_DOUBLE  NOT NULL, netsalesamt BINARY_DOUBLE  NOT NULL, grosssalesamt BINARY_DOUBLE  NOT NULL, materialcode VARCHAR2(64)  NOT NULL, brandcode VARCHAR2(64)  NOT NULL, category VARCHAR2(64)  NOT NULL, createdBy VARCHAR2(64)  DEFAULT '-1', createdDate TIMESTAMP  DEFAULT '11-nov-01', updatedBy VARCHAR2(64)  DEFAULT '-1', updatedDate TIMESTAMP  DEFAULT '11-nov-01', versionId NUMBER(11)  DEFAULT '-1', activeStatus NUMBER(1)  DEFAULT '1', txnAccessCode NUMBER  DEFAULT NULL, PRIMARY KEY (autoid));
+CREATE SEQUENCE ast_SalesData_T_seq START WITH 1 INCREMENT BY 1;
+
+
+exit;

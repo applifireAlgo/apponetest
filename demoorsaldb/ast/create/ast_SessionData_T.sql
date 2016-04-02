@@ -1,0 +1,3 @@
+CREATE TABLE ast_SessionData_T ( dataId VARCHAR2(256)  NOT NULL, customerId VARCHAR2(64)  DEFAULT NULL, userId VARCHAR2(64)  NOT NULL, sessionKey VARCHAR2(64)  NOT NULL, dataType NUMBER(10)  NOT NULL, numberValue NUMBER(10)  DEFAULT NULL, dateTimeValue TIMESTAMP  DEFAULT NULL, stringValue VARCHAR2(2000)  DEFAULT NULL, booleanValue CHAR CHECK (booleanValue in (0,1)), jsonValue CLOB  DEFAULT NULL, appSessionId VARCHAR2(256)  NOT NULL, createdBy VARCHAR2(64)  DEFAULT '-1', createdDate TIMESTAMP  DEFAULT '11-nov-01', updatedBy VARCHAR2(64)  DEFAULT '-1', updatedDate TIMESTAMP  DEFAULT '11-nov-01', versionId NUMBER(11)  DEFAULT '-1', activeStatus NUMBER(1)  DEFAULT '1', txnAccessCode NUMBER  DEFAULT NULL, PRIMARY KEY (dataId));
+
+exit;

@@ -1,0 +1,3 @@
+CREATE TABLE ast_RoleMenuBridge_TP ( roleMenuMapId VARCHAR2(64)  NOT NULL, roleId VARCHAR2(64)  NOT NULL, menuId VARCHAR2(64)  NOT NULL, isRead CHAR CHECK (isRead in (0,1)), isWrite CHAR CHECK (isWrite in (0,1)), isExecute CHAR CHECK (isExecute in (0,1)), createdBy VARCHAR2(64)  DEFAULT '-1', createdDate TIMESTAMP  DEFAULT '11-nov-01', updatedBy VARCHAR2(64)  DEFAULT '-1', updatedDate TIMESTAMP  DEFAULT '11-nov-01', versionId NUMBER(11)  DEFAULT '-1', activeStatus NUMBER(1)  DEFAULT '1', txnAccessCode NUMBER  DEFAULT NULL, PRIMARY KEY (roleMenuMapId));
+
+exit;

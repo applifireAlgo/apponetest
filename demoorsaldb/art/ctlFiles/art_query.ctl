@@ -1,0 +1,2 @@
+load data infile '/tmp/applifire/db/JAFRTOITE3ZP7JPEHMWKIW/A5286AD3-CF74-4BD8-9EF5-F183A14868C4/art/data/art_query.csv' into table art_query FIELDS TERMINATED BY '#appfire#' (query_id,jpql_query char(50000),query_type,query_json char(50000),name,hidden_name,app_creator_id,project_id,project_version_id,created_by,created_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',updated_by,updated_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',version_id,active_status,sql_query)
+

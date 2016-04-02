@@ -1,0 +1,2 @@
+load data infile '/tmp/applifire/db/JAFRTOITE3ZP7JPEHMWKIW/A5286AD3-CF74-4BD8-9EF5-F183A14868C4/art/data/art_app_alarm.csv' into table art_app_alarm FIELDS TERMINATED BY '#appfire#' (id,alarm_id,severity,connector_order_id,message,diagnose,solution,log_module_id,version_id,created_by,created_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',updated_by,updated_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',active_status)
+

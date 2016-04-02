@@ -1,0 +1,3 @@
+CREATE TABLE ast_PassRecovery_TP ( passRecoveryId VARCHAR2(64)  NOT NULL, userId VARCHAR2(64)  NOT NULL, questionId VARCHAR2(64)  NOT NULL, answer VARCHAR2(256)  NOT NULL, createdBy VARCHAR2(64)  DEFAULT '-1', createdDate TIMESTAMP  DEFAULT '11-nov-01', updatedBy VARCHAR2(64)  DEFAULT '-1', updatedDate TIMESTAMP  DEFAULT '11-nov-01', versionId NUMBER(11)  DEFAULT '-1', activeStatus NUMBER(1)  DEFAULT '1', txnAccessCode NUMBER  DEFAULT NULL, PRIMARY KEY (passRecoveryId));
+
+exit;

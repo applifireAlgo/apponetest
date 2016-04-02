@@ -1,0 +1,2 @@
+load data infile '$ART_DATA_PATH/art_service_operation.csv' into table art_service_operation FIELDS TERMINATED BY '#appfire#' (operation_id,service_id,operation_name,dao_class,operation_json CHAR(20000),source_details,project_id,app_creator_id,project_version_id,created_by,created_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',updated_by,updated_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',version_id,active_status,dao_id,dao_operation_id,operation_type)
+

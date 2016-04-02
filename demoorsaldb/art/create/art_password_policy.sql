@@ -1,0 +1,4 @@
+CREATE TABLE art_password_policy ( policyId VARCHAR2 (256) NOT NULL, policyName VARCHAR2 (256) NOT NULL, policyDescription VARCHAR2 (512) NOT NULL, minPwdLength NUMBER(10)  NOT NULL, maxPwdLength NUMBER(10)  NOT NULL, minCapitalLetters NUMBER(10)  NOT NULL, minSmallLetters NUMBER(10)  NOT NULL, minNumericValues NUMBER(10)  NOT NULL, minSpecialLetters NUMBER(10)  NOT NULL, allowedSpecialLetters VARCHAR2 (256) DEFAULT NULL, active_status NUMBER(10)  DEFAULT '1', version_id NUMBER(10)  DEFAULT '-1', updated_date TIMESTAMP(0) DEFAULT TO_TIMESTAMP('1900-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS.FF'), updated_by VARCHAR2(64)  DEFAULT '-1', created_date TIMESTAMP(0) DEFAULT TO_TIMESTAMP('1900-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS.FF'), created_by VARCHAR2(64)  DEFAULT '-1', PRIMARY KEY (policyId) ) ;
+
+exit
+

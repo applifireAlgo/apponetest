@@ -1,0 +1,2 @@
+load data infile '/tmp/applifire/db/JAFRTOITE3ZP7JPEHMWKIW/A5286AD3-CF74-4BD8-9EF5-F183A14868C4/art/data/art_log_module.csv' into table art_log_module FIELDS TERMINATED BY '#appfire#' (id,log_module_name,connector_order_id,severity,id_range_starts_with,system_defined,version_id,created_by,created_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',updated_by,updated_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',active_status)
+

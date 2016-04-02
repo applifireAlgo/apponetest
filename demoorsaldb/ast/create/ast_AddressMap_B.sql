@@ -1,0 +1,11 @@
+CREATE TABLE ast_AddressMap_B ( addMapId NUMBER(11)  NOT NULL, contactId VARCHAR2(64)  NOT NULL, addressId VARCHAR2(64)  NOT NULL, PRIMARY KEY (addMapId));
+CREATE SEQUENCE ast_AddressMap_B_seq START WITH 1 INCREMENT BY 1;
+CREATE OR REPLACE TRIGGER ast_AddressMap_B_seq_tr
+ BEFORE INSERT ON ast_AddressMap_B FOR EACH ROW
+WHEN (NEW.addMapId IS NULL)
+BEGIN
+ SELECT ast_AddressMap_B_seq.NEXTVAL INTO :NEW.addMapId FROM DUAL;
+END;
+/
+
+exit;
