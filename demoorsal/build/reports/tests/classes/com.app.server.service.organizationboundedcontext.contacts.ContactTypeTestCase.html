@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.113s</div>
+<div class="counter">0.131s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,27 +82,27 @@
 </thead>
 <tr>
 <td class="success">test1Save</td>
-<td>0.031s</td>
+<td>0.044s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">test2Update</td>
-<td>0.024s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">test3FindById</td>
-<td>0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">test5NegativeTesting</td>
 <td>0.027s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">test3FindById</td>
+<td>0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test5NegativeTesting</td>
+<td>0.039s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">test6Delete</td>
-<td>0.024s</td>
+<td>0.012s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -111,21 +111,21 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>Setting logged in user info for ADD
-[EL Fine]: sql: 2016-04-02 09:12:14.422--ClientSession(1994521862)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_ContactType_M (contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind =&gt; [E5ADE3B6-918C-484B-B735-39EAF951247C, eGDgsyDn20L4d0dDUGjcIFZuYSLximWaWefXuSgqGVW6hz9aIM, czm6ZZDUqIAL7Q4C5kthxDcUW1Vd7bmJZn9APIVI7RhIq5EWAS, 3dbnNuojKydqIWZhLaVMvAjE9RLIZEApBowo4UCscyI0q00Z15, 1, AAAAA, 2016-04-02 09:12:14.415, null, 2016-04-02 09:12:14.415, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:14.434--ClientSession(1878126641)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE ((activeStatus = ?) AND (contactTypeId = ?))
-	bind =&gt; [1, E5ADE3B6-918C-484B-B735-39EAF951247C]
+[EL Fine]: sql: 2016-04-02 09:32:48.297--ClientSession(267573700)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_ContactType_M (contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [31097DE3-2EBC-4387-9E96-245EA46BD8B9, eGDgsyDn20L4d0dDUGjcIFZuYSLximWaWefXuSgqGVW6hz9aIM, czm6ZZDUqIAL7Q4C5kthxDcUW1Vd7bmJZn9APIVI7RhIq5EWAS, 3dbnNuojKydqIWZhLaVMvAjE9RLIZEApBowo4UCscyI0q00Z15, 1, AAAAA, 2016-04-02 09:32:48.29, null, 2016-04-02 09:32:48.29, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:48.311--ClientSession(1067113131)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE ((activeStatus = ?) AND (contactTypeId = ?))
+	bind =&gt; [1, 31097DE3-2EBC-4387-9E96-245EA46BD8B9]
 Setting logged in user info for UPDATE
-[EL Fine]: sql: 2016-04-02 09:12:14.445--ClientSession(556455684)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE (contactTypeId = ?)
-	bind =&gt; [E5ADE3B6-918C-484B-B735-39EAF951247C]
-[EL Fine]: sql: 2016-04-02 09:12:14.449--ClientSession(556455684)--Connection(811598123)--Thread(Thread[Test worker,5,main])--UPDATE ast_ContactType_M SET contactType = ?, contactTypeDesc = ?, contactTypeIcon = ?, updatedBy = ?, versionId = ? WHERE ((contactTypeId = ?) AND (versionId = ?))
-	bind =&gt; [3mXVZt6PsQGr7ulrxtBa5qB5BQjh698k09zudSUcxBbOAbpuZD, G9P7mMuPGpqnmVwhId1CHEa7nxNCMDoxzQVShZVOrZ3fTqulh5, 4b8t54f9U4NvtkMjkDtnJkNQOIvwGiImK8xxqxbAstS4tONF1G, AAAAA, 2, E5ADE3B6-918C-484B-B735-39EAF951247C, 1]
-[EL Fine]: sql: 2016-04-02 09:12:14.458--ClientSession(1495635698)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE ((activeStatus = ?) AND (contactTypeId = ?))
-	bind =&gt; [1, E5ADE3B6-918C-484B-B735-39EAF951247C]
-[EL Fine]: sql: 2016-04-02 09:12:14.503--ClientSession(304857955)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE (contactTypeId = ?)
-	bind =&gt; [E5ADE3B6-918C-484B-B735-39EAF951247C]
-[EL Fine]: sql: 2016-04-02 09:12:14.506--ClientSession(304857955)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_ContactType_M WHERE ((contactTypeId = ?) AND (versionId = ?))
-	bind =&gt; [E5ADE3B6-918C-484B-B735-39EAF951247C, 2]
+[EL Fine]: sql: 2016-04-02 09:32:48.323--ClientSession(756464738)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE (contactTypeId = ?)
+	bind =&gt; [31097DE3-2EBC-4387-9E96-245EA46BD8B9]
+[EL Fine]: sql: 2016-04-02 09:32:48.327--ClientSession(756464738)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_ContactType_M SET contactType = ?, contactTypeDesc = ?, contactTypeIcon = ?, updatedBy = ?, versionId = ? WHERE ((contactTypeId = ?) AND (versionId = ?))
+	bind =&gt; [3mXVZt6PsQGr7ulrxtBa5qB5BQjh698k09zudSUcxBbOAbpuZD, G9P7mMuPGpqnmVwhId1CHEa7nxNCMDoxzQVShZVOrZ3fTqulh5, 4b8t54f9U4NvtkMjkDtnJkNQOIvwGiImK8xxqxbAstS4tONF1G, AAAAA, 2, 31097DE3-2EBC-4387-9E96-245EA46BD8B9, 1]
+[EL Fine]: sql: 2016-04-02 09:32:48.338--ClientSession(1604188279)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE ((activeStatus = ?) AND (contactTypeId = ?))
+	bind =&gt; [1, 31097DE3-2EBC-4387-9E96-245EA46BD8B9]
+[EL Fine]: sql: 2016-04-02 09:32:48.388--ClientSession(535978722)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE (contactTypeId = ?)
+	bind =&gt; [31097DE3-2EBC-4387-9E96-245EA46BD8B9]
+[EL Fine]: sql: 2016-04-02 09:32:48.39--ClientSession(535978722)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_ContactType_M WHERE ((contactTypeId = ?) AND (versionId = ?))
+	bind =&gt; [31097DE3-2EBC-4387-9E96-245EA46BD8B9, 2]
 </pre>
 </span>
 </div>
@@ -367,7 +367,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.3</a> at Apr 2, 2016 9:12:22 AM</p>
+<a href="http://www.gradle.org">Gradle 2.3</a> at Apr 2, 2016 9:32:52 AM</p>
 </div>
 </div>
 </body>

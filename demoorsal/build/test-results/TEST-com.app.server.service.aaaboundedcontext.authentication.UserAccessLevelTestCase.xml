@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:12:21" hostname="4729df4c0c40" time="0.092">
+<testsuite name="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:32:51" hostname="431ae795be74" time="0.099">
   <properties/>
-  <testcase name="test1Save" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.021"/>
-  <testcase name="test2Update" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.013"/>
+  <testcase name="test1Save" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.022"/>
+  <testcase name="test2Update" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.014"/>
   <testcase name="test3FindById" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.005"/>
-  <testcase name="test5NegativeTesting" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.044"/>
-  <testcase name="test6Delete" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.008"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.051"/>
+  <testcase name="test6Delete" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase" time="0.007"/>
   <system-out><![CDATA[Setting logged in user info for ADD
-[EL Fine]: sql: 2016-04-02 09:12:21.193--ClientSession(5895235)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 62539, 1, AAAAA, 2016-04-02 09:12:21.19, null, 2016-04-02 09:12:21.19, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:21.199--ClientSession(1937184249)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE ((activeStatus = ?) AND (userAccessLevelId = ?))
-	bind => [1, 144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D]
+[EL Fine]: sql: 2016-04-02 09:32:51.125--ClientSession(2133514897)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [4A27C335-1850-4313-BCBE-8F432E95A1CA, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 8837, 1, AAAAA, 2016-04-02 09:32:51.122, null, 2016-04-02 09:32:51.122, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:51.132--ClientSession(1686787821)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE ((activeStatus = ?) AND (userAccessLevelId = ?))
+	bind => [1, 4A27C335-1850-4313-BCBE-8F432E95A1CA]
 Setting logged in user info for UPDATE
-[EL Fine]: sql: 2016-04-02 09:12:21.205--ClientSession(1928611756)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE (userAccessLevelId = ?)
-	bind => [144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D]
-[EL Fine]: sql: 2016-04-02 09:12:21.206--ClientSession(1928611756)--Connection(811598123)--Thread(Thread[Test worker,5,main])--UPDATE ast_UserAccessLevel_M SET levelDescription = ?, levelHelp = ?, levelIcon = ?, levelName = ?, userAccessLevel = ?, updatedBy = ?, versionId = ? WHERE ((userAccessLevelId = ?) AND (versionId = ?))
-	bind => [IDLBoWDpKTPOKcFnc5Ha3H2UvarZHIjrwu617KUyiILMeXSHZp, TK1SLj5gtRhOkqoQjAK1Y597YL8R6mpqXZOFbGxXJYZaN0a4Rr, qH2jKCpAkRMT3B6jO9LI125KsvRp7lAzUHsvqhkZkCRqR054Z3, TsJMxYdYzrFRWZ9HnGP2j8tQBZissrdxZIwm0965FhDW28T5UJ, 36369, AAAAA, 2, 144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D, 1]
-[EL Fine]: sql: 2016-04-02 09:12:21.212--ClientSession(921543653)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE ((activeStatus = ?) AND (userAccessLevelId = ?))
-	bind => [1, 144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D]
-[EL Fine]: sql: 2016-04-02 09:12:21.217--ClientSession(908587785)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE ((activeStatus = ?) AND (userAccessLevelId = ?))
-	bind => [1, 144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D]
-[EL Fine]: sql: 2016-04-02 09:12:21.245--ClientSession(2084802868)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [51F7338B-0933-44DE-A533-0D36FD38570C, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:12:21.242, null, 2016-04-02 09:12:21.242, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:21.251--ClientSession(2084802868)--Thread(Thread[Test worker,5,main])--SELECT 1 FROM DUAL
-[EL Warning]: 2016-04-02 09:12:21.252--UnitOfWork(1931469472)--Thread(Thread[Test worker,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2016-04-02 09:32:51.137--ClientSession(330166484)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE (userAccessLevelId = ?)
+	bind => [4A27C335-1850-4313-BCBE-8F432E95A1CA]
+[EL Fine]: sql: 2016-04-02 09:32:51.139--ClientSession(330166484)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_UserAccessLevel_M SET levelDescription = ?, levelHelp = ?, levelIcon = ?, levelName = ?, userAccessLevel = ?, updatedBy = ?, versionId = ? WHERE ((userAccessLevelId = ?) AND (versionId = ?))
+	bind => [IDLBoWDpKTPOKcFnc5Ha3H2UvarZHIjrwu617KUyiILMeXSHZp, TK1SLj5gtRhOkqoQjAK1Y597YL8R6mpqXZOFbGxXJYZaN0a4Rr, qH2jKCpAkRMT3B6jO9LI125KsvRp7lAzUHsvqhkZkCRqR054Z3, TsJMxYdYzrFRWZ9HnGP2j8tQBZissrdxZIwm0965FhDW28T5UJ, 36369, AAAAA, 2, 4A27C335-1850-4313-BCBE-8F432E95A1CA, 1]
+[EL Fine]: sql: 2016-04-02 09:32:51.146--ClientSession(639332441)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE ((activeStatus = ?) AND (userAccessLevelId = ?))
+	bind => [1, 4A27C335-1850-4313-BCBE-8F432E95A1CA]
+[EL Fine]: sql: 2016-04-02 09:32:51.15--ClientSession(709019647)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE ((activeStatus = ?) AND (userAccessLevelId = ?))
+	bind => [1, 4A27C335-1850-4313-BCBE-8F432E95A1CA]
+[EL Fine]: sql: 2016-04-02 09:32:51.183--ClientSession(373528887)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [E831749F-DEEC-4923-A1BA-F98354AB7419, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:32:51.18, null, 2016-04-02 09:32:51.18, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:51.187--ClientSession(373528887)--Thread(Thread[Test worker,5,main])--SELECT 1 FROM DUAL
+[EL Warning]: 2016-04-02 09:32:51.188--UnitOfWork(810320824)--Thread(Thread[Test worker,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (DEMOORSAL.UNQ_6488EEA) violated
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [51F7338B-0933-44DE-A533-0D36FD38570C, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:12:21.242, null, 2016-04-02 09:12:21.242, 1, 51000]
+	bind => [E831749F-DEEC-4923-A1BA-F98354AB7419, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:32:51.18, null, 2016-04-02 09:32:51.18, 1, 51000]
 Query: InsertObjectQuery(36369,2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa,Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga)
-[EL Fine]: sql: 2016-04-02 09:12:21.262--ClientSession(1966782961)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE (userAccessLevelId = ?)
-	bind => [144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D]
-[EL Fine]: sql: 2016-04-02 09:12:21.264--ClientSession(1966782961)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessLevel_M WHERE ((userAccessLevelId = ?) AND (versionId = ?))
-	bind => [144BE5AA-BAF9-4D09-A5BC-0E7FED9F9F7D, 2]
+[EL Fine]: sql: 2016-04-02 09:32:51.201--ClientSession(554901080)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE (userAccessLevelId = ?)
+	bind => [4A27C335-1850-4313-BCBE-8F432E95A1CA]
+[EL Fine]: sql: 2016-04-02 09:32:51.203--ClientSession(554901080)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessLevel_M WHERE ((userAccessLevelId = ?) AND (versionId = ?))
+	bind => [4A27C335-1850-4313-BCBE-8F432E95A1CA, 2]
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.aaaboundedcontext.authentication.UserAccessLevel.userAccessLevel may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.aaaboundedcontext.authentication.UserAccessLevel.userAccessLevel may not be null
@@ -472,7 +472,7 @@ Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [51F7338B-0933-44DE-A533-0D36FD38570C, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:12:21.242, null, 2016-04-02 09:12:21.242, 1, 51000]
+	bind => [E831749F-DEEC-4923-A1BA-F98354AB7419, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:32:51.18, null, 2016-04-02 09:32:51.18, 1, 51000]
 Query: InsertObjectQuery(36369,2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa,Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga)
 	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:524)
 	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:757)
@@ -484,7 +484,7 @@ Query: InsertObjectQuery(36369,2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCV
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:91)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
-	at com.sun.proxy.$Proxy136.save(Unknown Source)
+	at com.sun.proxy.$Proxy137.save(Unknown Source)
 	at com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase.validateUserAccessLevel(UserAccessLevelTestCase.java:182)
 	at com.app.server.service.aaaboundedcontext.authentication.UserAccessLevelTestCase.test5NegativeTesting(UserAccessLevelTestCase.java:259)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -539,7 +539,7 @@ Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [51F7338B-0933-44DE-A533-0D36FD38570C, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:12:21.242, null, 2016-04-02 09:12:21.242, 1, 51000]
+	bind => [E831749F-DEEC-4923-A1BA-F98354AB7419, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:32:51.18, null, 2016-04-02 09:32:51.18, 1, 51000]
 Query: InsertObjectQuery(36369,2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa,Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga)
 	at org.eclipse.persistence.internal.jpa.transaction.EntityTransactionImpl.commit(EntityTransactionImpl.java:157)
 	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:515)
@@ -549,7 +549,7 @@ Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [51F7338B-0933-44DE-A533-0D36FD38570C, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:12:21.242, null, 2016-04-02 09:12:21.242, 1, 51000]
+	bind => [E831749F-DEEC-4923-A1BA-F98354AB7419, Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga, y1wyIF3BNirEL56DYNic6qelLohNgL13Fftvir2TIT3dSDHISD, L87MwRp3j872LFDYuCJSmIQQJ0okkWKKGfWbO05fvOUxJZtRML, 2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa, 36369, 1, AAAAA, 2016-04-02 09:32:51.18, null, 2016-04-02 09:32:51.18, 1, 51000]
 Query: InsertObjectQuery(36369,2R2YZZIhBj0KjvyfCnhSB4bc0Ps75y3rlH5oW08U220MH2XCVa,Z1sPtBFBdaxJs3n0KGq5AiZtgfBZYKTsXunETNrDP4c4fF2Sga)
 	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:331)
 	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:900)

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:12:14" hostname="4729df4c0c40" time="0.113">
+<testsuite name="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:32:48" hostname="431ae795be74" time="0.106">
   <properties/>
   <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.038"/>
-  <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.025"/>
-  <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.009"/>
-  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.027"/>
-  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.01"/>
+  <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.02"/>
+  <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.008"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.026"/>
+  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.contacts.CommunicationGroupTestCase" time="0.012"/>
   <system-out><![CDATA[Setting logged in user info for ADD
-[EL Fine]: sql: 2016-04-02 09:12:14.554--ClientSession(578050042)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_CommunicationGroup_M (commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [BC542826-E006-413E-9E80-4A2AD44B17ED, SKlmONkfdKNmVnZl262jVgQarAgSPsJjeM6RAMbXMaIGoaRNyw, TcHBUidu6quGbz63X2Ryh1aXivmRp6NYE0XMvnuWYBMNLDZK9O, 1, AAAAA, 2016-04-02 09:12:14.548, null, 2016-04-02 09:12:14.548, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:14.565--ClientSession(822220954)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE ((activeStatus = ?) AND (commGroupId = ?))
-	bind => [1, BC542826-E006-413E-9E80-4A2AD44B17ED]
+[EL Fine]: sql: 2016-04-02 09:32:48.433--ClientSession(2101883720)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_CommunicationGroup_M (commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [B58DA13F-1831-4C21-B746-C5FF15B010CF, SKlmONkfdKNmVnZl262jVgQarAgSPsJjeM6RAMbXMaIGoaRNyw, TcHBUidu6quGbz63X2Ryh1aXivmRp6NYE0XMvnuWYBMNLDZK9O, 1, AAAAA, 2016-04-02 09:32:48.428, null, 2016-04-02 09:32:48.428, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:48.442--ClientSession(740171060)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE ((activeStatus = ?) AND (commGroupId = ?))
+	bind => [1, B58DA13F-1831-4C21-B746-C5FF15B010CF]
 Setting logged in user info for UPDATE
-[EL Fine]: sql: 2016-04-02 09:12:14.576--ClientSession(1221294026)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE (commGroupId = ?)
-	bind => [BC542826-E006-413E-9E80-4A2AD44B17ED]
-[EL Fine]: sql: 2016-04-02 09:12:14.579--ClientSession(1221294026)--Connection(811598123)--Thread(Thread[Test worker,5,main])--UPDATE ast_CommunicationGroup_M SET commGroupDescription = ?, commGroupName = ?, updatedBy = ?, versionId = ? WHERE ((commGroupId = ?) AND (versionId = ?))
-	bind => [ZHjWsjm2Y4Ywvjf16uVQ7K4hL4OrIlXnf3OPACibvDiYLaKTkr, HXLQvn6QnCQcBRJpAebwUGyofNErr6Wr4h8VMzZMMyA1q7mWDR, AAAAA, 2, BC542826-E006-413E-9E80-4A2AD44B17ED, 1]
-[EL Fine]: sql: 2016-04-02 09:12:14.59--ClientSession(114676428)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE ((activeStatus = ?) AND (commGroupId = ?))
-	bind => [1, BC542826-E006-413E-9E80-4A2AD44B17ED]
-[EL Fine]: sql: 2016-04-02 09:12:14.627--ClientSession(1330863772)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE (commGroupId = ?)
-	bind => [BC542826-E006-413E-9E80-4A2AD44B17ED]
-[EL Fine]: sql: 2016-04-02 09:12:14.629--ClientSession(1330863772)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_CommunicationGroup_M WHERE ((commGroupId = ?) AND (versionId = ?))
-	bind => [BC542826-E006-413E-9E80-4A2AD44B17ED, 2]
+[EL Fine]: sql: 2016-04-02 09:32:48.45--ClientSession(118662373)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE (commGroupId = ?)
+	bind => [B58DA13F-1831-4C21-B746-C5FF15B010CF]
+[EL Fine]: sql: 2016-04-02 09:32:48.453--ClientSession(118662373)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_CommunicationGroup_M SET commGroupDescription = ?, commGroupName = ?, updatedBy = ?, versionId = ? WHERE ((commGroupId = ?) AND (versionId = ?))
+	bind => [ZHjWsjm2Y4Ywvjf16uVQ7K4hL4OrIlXnf3OPACibvDiYLaKTkr, HXLQvn6QnCQcBRJpAebwUGyofNErr6Wr4h8VMzZMMyA1q7mWDR, AAAAA, 2, B58DA13F-1831-4C21-B746-C5FF15B010CF, 1]
+[EL Fine]: sql: 2016-04-02 09:32:48.462--ClientSession(1449136690)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE ((activeStatus = ?) AND (commGroupId = ?))
+	bind => [1, B58DA13F-1831-4C21-B746-C5FF15B010CF]
+[EL Fine]: sql: 2016-04-02 09:32:48.498--ClientSession(760827772)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE (commGroupId = ?)
+	bind => [B58DA13F-1831-4C21-B746-C5FF15B010CF]
+[EL Fine]: sql: 2016-04-02 09:32:48.5--ClientSession(760827772)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_CommunicationGroup_M WHERE ((commGroupId = ?) AND (versionId = ?))
+	bind => [B58DA13F-1831-4C21-B746-C5FF15B010CF, 2]
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.organizationboundedcontext.contacts.CommunicationGroup.commGroupName may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.organizationboundedcontext.contacts.CommunicationGroup.commGroupName may not be null
@@ -58,8 +58,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
@@ -68,8 +67,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
 	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
@@ -114,8 +112,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
@@ -124,8 +121,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
 	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
@@ -170,8 +166,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
@@ -180,8 +175,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
 	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)

@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.101s</div>
+<div class="counter">0.108s</div>
 <p>duration</p>
 </div>
 </td>
@@ -92,7 +92,7 @@
 </tr>
 <tr>
 <td class="success">test3FindById</td>
-<td>0.005s</td>
+<td>0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -102,12 +102,12 @@
 </tr>
 <tr>
 <td class="success">test5NegativeTesting</td>
-<td>0.017s</td>
+<td>0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">test6Delete</td>
-<td>0.023s</td>
+<td>0.025s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -115,30 +115,30 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>[EL Fine]: sql: 2016-04-02 09:12:13.76--ClientSession(263391728)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_CommunicationGroup_M (commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind =&gt; [339AB297-84BB-4BC2-86A8-05FBA8D6D6FC, 8mIJLuFoHsqHALKJ6PQKynFzpuCXjFpGmEBQbdaijlwr3iuZsB, Tgc6GhdFdJZqQeCBdlc3tva9dmFJ1TvdCNfdXlv82NsA2Wu0Xr, 1, AAAAA, 2016-04-02 09:12:13.756, null, 2016-04-02 09:12:13.756, 1, 51000]
+<pre>[EL Fine]: sql: 2016-04-02 09:32:47.557--ClientSession(1236470721)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_CommunicationGroup_M (commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [32E59B18-CC04-4712-B24A-3E146C0B7CF9, 8mIJLuFoHsqHALKJ6PQKynFzpuCXjFpGmEBQbdaijlwr3iuZsB, Tgc6GhdFdJZqQeCBdlc3tva9dmFJ1TvdCNfdXlv82NsA2Wu0Xr, 1, AAAAA, 2016-04-02 09:32:47.553, null, 2016-04-02 09:32:47.553, 1, 51000]
 Setting logged in user info for ADD
-[EL Fine]: sql: 2016-04-02 09:12:13.766--ClientSession(24006233)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_CommunicationType_M (commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind =&gt; [FBEB6706-8598-4038-82D4-17315EF21666, 339AB297-84BB-4BC2-86A8-05FBA8D6D6FC, f0rBEuJeJJvjG2HSftpxGk90FGSlmqAelzKnGN7dzaVoGYa09K, I87UKTpkGQszZTAap0Y6nBanGOBKSaGEwsmbRmEpx55VQ8Trkx, 1, AAAAA, 2016-04-02 09:12:13.763, null, 2016-04-02 09:12:13.763, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:13.774--ClientSession(1003819407)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE ((activeStatus = ?) AND (commType = ?))
-	bind =&gt; [1, FBEB6706-8598-4038-82D4-17315EF21666]
+[EL Fine]: sql: 2016-04-02 09:32:47.563--ClientSession(2056286683)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_CommunicationType_M (commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [E838568C-E673-487E-902A-97B5DF571240, 32E59B18-CC04-4712-B24A-3E146C0B7CF9, f0rBEuJeJJvjG2HSftpxGk90FGSlmqAelzKnGN7dzaVoGYa09K, I87UKTpkGQszZTAap0Y6nBanGOBKSaGEwsmbRmEpx55VQ8Trkx, 1, AAAAA, 2016-04-02 09:32:47.56, null, 2016-04-02 09:32:47.56, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:47.571--ClientSession(415459265)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE ((activeStatus = ?) AND (commType = ?))
+	bind =&gt; [1, E838568C-E673-487E-902A-97B5DF571240]
 Setting logged in user info for UPDATE
-[EL Fine]: sql: 2016-04-02 09:12:13.78--ClientSession(1540711267)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE (commType = ?)
-	bind =&gt; [FBEB6706-8598-4038-82D4-17315EF21666]
-[EL Fine]: sql: 2016-04-02 09:12:13.782--ClientSession(1540711267)--Connection(811598123)--Thread(Thread[Test worker,5,main])--UPDATE ast_CommunicationType_M SET commTypeDescription = ?, commTypeName = ?, updatedBy = ?, versionId = ? WHERE ((commType = ?) AND (versionId = ?))
-	bind =&gt; [Y9rU56bOi5ES4os73tvzurhjW9xnwVK5IJobGD8vfPpmaQlbjP, Ip2VrpUuInTBoLe3ZoMAXxxQC4D98O8APIF7KyWBGCsvqGcor1, AAAAA, 2, FBEB6706-8598-4038-82D4-17315EF21666, 1]
-[EL Fine]: sql: 2016-04-02 09:12:13.789--ClientSession(999314408)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE ((activeStatus = ?) AND (commType = ?))
-	bind =&gt; [1, FBEB6706-8598-4038-82D4-17315EF21666]
-[EL Fine]: sql: 2016-04-02 09:12:13.794--ClientSession(391485557)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE ((activeStatus = ?) AND (commGroupId = ?))
-	bind =&gt; [1, 339AB297-84BB-4BC2-86A8-05FBA8D6D6FC]
-[EL Fine]: sql: 2016-04-02 09:12:13.821--ClientSession(882476452)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE (commType = ?)
-	bind =&gt; [FBEB6706-8598-4038-82D4-17315EF21666]
-[EL Fine]: sql: 2016-04-02 09:12:13.824--ClientSession(882476452)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_CommunicationType_M WHERE ((commType = ?) AND (versionId = ?))
-	bind =&gt; [FBEB6706-8598-4038-82D4-17315EF21666, 2]
-[EL Fine]: sql: 2016-04-02 09:12:13.83--ClientSession(937217753)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE (commGroupId = ?)
-	bind =&gt; [339AB297-84BB-4BC2-86A8-05FBA8D6D6FC]
-[EL Fine]: sql: 2016-04-02 09:12:13.833--ClientSession(937217753)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_CommunicationGroup_M WHERE ((commGroupId = ?) AND (versionId = ?))
-	bind =&gt; [339AB297-84BB-4BC2-86A8-05FBA8D6D6FC, 1]
+[EL Fine]: sql: 2016-04-02 09:32:47.577--ClientSession(1686024731)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE (commType = ?)
+	bind =&gt; [E838568C-E673-487E-902A-97B5DF571240]
+[EL Fine]: sql: 2016-04-02 09:32:47.579--ClientSession(1686024731)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_CommunicationType_M SET commTypeDescription = ?, commTypeName = ?, updatedBy = ?, versionId = ? WHERE ((commType = ?) AND (versionId = ?))
+	bind =&gt; [Y9rU56bOi5ES4os73tvzurhjW9xnwVK5IJobGD8vfPpmaQlbjP, Ip2VrpUuInTBoLe3ZoMAXxxQC4D98O8APIF7KyWBGCsvqGcor1, AAAAA, 2, E838568C-E673-487E-902A-97B5DF571240, 1]
+[EL Fine]: sql: 2016-04-02 09:32:47.586--ClientSession(1814120711)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE ((activeStatus = ?) AND (commType = ?))
+	bind =&gt; [1, E838568C-E673-487E-902A-97B5DF571240]
+[EL Fine]: sql: 2016-04-02 09:32:47.592--ClientSession(218665377)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE ((activeStatus = ?) AND (commGroupId = ?))
+	bind =&gt; [1, 32E59B18-CC04-4712-B24A-3E146C0B7CF9]
+[EL Fine]: sql: 2016-04-02 09:32:47.624--ClientSession(1683640944)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commType, commGroupId, commTypeDescription, commTypeName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationType_M WHERE (commType = ?)
+	bind =&gt; [E838568C-E673-487E-902A-97B5DF571240]
+[EL Fine]: sql: 2016-04-02 09:32:47.626--ClientSession(1683640944)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_CommunicationType_M WHERE ((commType = ?) AND (versionId = ?))
+	bind =&gt; [E838568C-E673-487E-902A-97B5DF571240, 2]
+[EL Fine]: sql: 2016-04-02 09:32:47.633--ClientSession(1727709708)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT commGroupId, commGroupDescription, commGroupName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_CommunicationGroup_M WHERE (commGroupId = ?)
+	bind =&gt; [32E59B18-CC04-4712-B24A-3E146C0B7CF9]
+[EL Fine]: sql: 2016-04-02 09:32:47.636--ClientSession(1727709708)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_CommunicationGroup_M WHERE ((commGroupId = ?) AND (versionId = ?))
+	bind =&gt; [32E59B18-CC04-4712-B24A-3E146C0B7CF9, 1]
 </pre>
 </span>
 </div>
@@ -324,7 +324,7 @@ com.athena.framework.server.exception.biz.SpartanConstraintViolationException: E
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.3</a> at Apr 2, 2016 9:12:22 AM</p>
+<a href="http://www.gradle.org">Gradle 2.3</a> at Apr 2, 2016 9:32:52 AM</p>
 </div>
 </div>
 </body>

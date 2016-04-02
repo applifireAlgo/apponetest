@@ -115,3 +115,5 @@ sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/alter_ast_CurrentMonth_M.sql;
 
 sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/alter_ast_UserAccess_M.sql; 
 
+sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/alter_ast_Appdetails_M.sql; 
+

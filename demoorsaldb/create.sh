@@ -215,5 +215,7 @@ sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/ast_CurrentMonth_M.sql;
 
 sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/ast_UserAccess_M.sql; 
 
+sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/ast_Appdetails_M.sql; 
+
 echo 'create AST table process ends...'
 

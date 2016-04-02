@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:12:21" hostname="4729df4c0c40" time="0.099">
+<testsuite name="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:32:51" hostname="431ae795be74" time="0.105">
   <properties/>
-  <testcase name="test1Save" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.036"/>
+  <testcase name="test1Save" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.039"/>
   <testcase name="test2Update" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.018"/>
-  <testcase name="test3FindById" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.007"/>
+  <testcase name="test3FindById" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.004"/>
   <testcase name="test5NegativeTesting" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.031"/>
-  <testcase name="test6Delete" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.006"/>
+  <testcase name="test6Delete" classname="com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase" time="0.009"/>
   <system-out><![CDATA[Setting logged in user info for ADD
-[EL Fine]: sql: 2016-04-02 09:12:21.86--ClientSession(789415552)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [2B7B3074-4473-494A-BFD4-C04DF374159F, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 31028, 1, AAAAA, 2016-04-02 09:12:21.855, null, 2016-04-02 09:12:21.855, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:21.869--ClientSession(299566262)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE ((activeStatus = ?) AND (userAccessDomainId = ?))
-	bind => [1, 2B7B3074-4473-494A-BFD4-C04DF374159F]
+[EL Fine]: sql: 2016-04-02 09:32:51.964--ClientSession(1718458737)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [2F60D083-706D-400E-A722-87FFFC166DA9, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 37695, 1, AAAAA, 2016-04-02 09:32:51.959, null, 2016-04-02 09:32:51.959, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:51.977--ClientSession(1796519808)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE ((activeStatus = ?) AND (userAccessDomainId = ?))
+	bind => [1, 2F60D083-706D-400E-A722-87FFFC166DA9]
 Setting logged in user info for UPDATE
-[EL Fine]: sql: 2016-04-02 09:12:21.876--ClientSession(1730340722)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE (userAccessDomainId = ?)
-	bind => [2B7B3074-4473-494A-BFD4-C04DF374159F]
-[EL Fine]: sql: 2016-04-02 09:12:21.878--ClientSession(1730340722)--Connection(811598123)--Thread(Thread[Test worker,5,main])--UPDATE ast_UserAccessDomain_M SET domainDescription = ?, domainHelp = ?, domainIcon = ?, domainName = ?, userAccessDomain = ?, updatedBy = ?, versionId = ? WHERE ((userAccessDomainId = ?) AND (versionId = ?))
-	bind => [HHyCRBXrgC2ud7JMQ0EVsdlTZyagDob818R5Jc2k0IGYz14Om5, V8lUNimrrC1ug8b6PLHrySO7HWeTaDHfWD8AaQXhfeQW7krpBF, fecJfuSHHGhVbBD7IW2Pjwe0LQMEqF5uXWMH6waqNnyYyuvO86, g2zI8H4rLWpCqpVXw9F0lmqSk8uKG3a85ndQFRYl9cKWF6mHo0, 33566, AAAAA, 2, 2B7B3074-4473-494A-BFD4-C04DF374159F, 1]
-[EL Fine]: sql: 2016-04-02 09:12:21.887--ClientSession(564112030)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE ((activeStatus = ?) AND (userAccessDomainId = ?))
-	bind => [1, 2B7B3074-4473-494A-BFD4-C04DF374159F]
-[EL Fine]: sql: 2016-04-02 09:12:21.892--ClientSession(949234855)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE ((activeStatus = ?) AND (userAccessDomainId = ?))
-	bind => [1, 2B7B3074-4473-494A-BFD4-C04DF374159F]
-[EL Fine]: sql: 2016-04-02 09:12:21.914--ClientSession(736812154)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [F31C5CD6-1C7B-41BE-9F1B-D2D6237384C5, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:12:21.912, null, 2016-04-02 09:12:21.912, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:21.916--ClientSession(736812154)--Thread(Thread[Test worker,5,main])--SELECT 1 FROM DUAL
-[EL Warning]: 2016-04-02 09:12:21.917--UnitOfWork(1211163676)--Thread(Thread[Test worker,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2016-04-02 09:32:51.983--ClientSession(1450908990)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE (userAccessDomainId = ?)
+	bind => [2F60D083-706D-400E-A722-87FFFC166DA9]
+[EL Fine]: sql: 2016-04-02 09:32:51.985--ClientSession(1450908990)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_UserAccessDomain_M SET domainDescription = ?, domainHelp = ?, domainIcon = ?, domainName = ?, userAccessDomain = ?, updatedBy = ?, versionId = ? WHERE ((userAccessDomainId = ?) AND (versionId = ?))
+	bind => [HHyCRBXrgC2ud7JMQ0EVsdlTZyagDob818R5Jc2k0IGYz14Om5, V8lUNimrrC1ug8b6PLHrySO7HWeTaDHfWD8AaQXhfeQW7krpBF, fecJfuSHHGhVbBD7IW2Pjwe0LQMEqF5uXWMH6waqNnyYyuvO86, g2zI8H4rLWpCqpVXw9F0lmqSk8uKG3a85ndQFRYl9cKWF6mHo0, 33566, AAAAA, 2, 2F60D083-706D-400E-A722-87FFFC166DA9, 1]
+[EL Fine]: sql: 2016-04-02 09:32:51.992--ClientSession(1689168049)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE ((activeStatus = ?) AND (userAccessDomainId = ?))
+	bind => [1, 2F60D083-706D-400E-A722-87FFFC166DA9]
+[EL Fine]: sql: 2016-04-02 09:32:51.996--ClientSession(45081528)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE ((activeStatus = ?) AND (userAccessDomainId = ?))
+	bind => [1, 2F60D083-706D-400E-A722-87FFFC166DA9]
+[EL Fine]: sql: 2016-04-02 09:32:52.02--ClientSession(801958211)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [51725FDB-6592-4571-8E8A-BC1D4818A2B9, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:32:52.017, null, 2016-04-02 09:32:52.017, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:52.022--ClientSession(801958211)--Thread(Thread[Test worker,5,main])--SELECT 1 FROM DUAL
+[EL Warning]: 2016-04-02 09:32:52.022--UnitOfWork(904283705)--Thread(Thread[Test worker,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (DEMOORSAL.UNQ_B6299BE) violated
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [F31C5CD6-1C7B-41BE-9F1B-D2D6237384C5, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:12:21.912, null, 2016-04-02 09:12:21.912, 1, 51000]
+	bind => [51725FDB-6592-4571-8E8A-BC1D4818A2B9, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:32:52.017, null, 2016-04-02 09:32:52.017, 1, 51000]
 Query: InsertObjectQuery(33566,IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r,cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti)
-[EL Fine]: sql: 2016-04-02 09:12:21.923--ClientSession(2118834191)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE (userAccessDomainId = ?)
-	bind => [2B7B3074-4473-494A-BFD4-C04DF374159F]
-[EL Fine]: sql: 2016-04-02 09:12:21.924--ClientSession(2118834191)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessDomain_M WHERE ((userAccessDomainId = ?) AND (versionId = ?))
-	bind => [2B7B3074-4473-494A-BFD4-C04DF374159F, 2]
+[EL Fine]: sql: 2016-04-02 09:32:52.029--ClientSession(1424029225)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE (userAccessDomainId = ?)
+	bind => [2F60D083-706D-400E-A722-87FFFC166DA9]
+[EL Fine]: sql: 2016-04-02 09:32:52.031--ClientSession(1424029225)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessDomain_M WHERE ((userAccessDomainId = ?) AND (versionId = ?))
+	bind => [2F60D083-706D-400E-A722-87FFFC166DA9, 2]
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.aaaboundedcontext.authentication.UserAccessDomain.userAccessDomain may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.aaaboundedcontext.authentication.UserAccessDomain.userAccessDomain may not be null
@@ -472,7 +472,7 @@ Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [F31C5CD6-1C7B-41BE-9F1B-D2D6237384C5, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:12:21.912, null, 2016-04-02 09:12:21.912, 1, 51000]
+	bind => [51725FDB-6592-4571-8E8A-BC1D4818A2B9, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:32:52.017, null, 2016-04-02 09:32:52.017, 1, 51000]
 Query: InsertObjectQuery(33566,IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r,cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti)
 	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:524)
 	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:757)
@@ -484,7 +484,7 @@ Query: InsertObjectQuery(33566,IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:91)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
-	at com.sun.proxy.$Proxy133.save(Unknown Source)
+	at com.sun.proxy.$Proxy134.save(Unknown Source)
 	at com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase.validateUserAccessDomain(UserAccessDomainTestCase.java:182)
 	at com.app.server.service.aaaboundedcontext.authentication.UserAccessDomainTestCase.test5NegativeTesting(UserAccessDomainTestCase.java:259)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -539,7 +539,7 @@ Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [F31C5CD6-1C7B-41BE-9F1B-D2D6237384C5, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:12:21.912, null, 2016-04-02 09:12:21.912, 1, 51000]
+	bind => [51725FDB-6592-4571-8E8A-BC1D4818A2B9, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:32:52.017, null, 2016-04-02 09:32:52.017, 1, 51000]
 Query: InsertObjectQuery(33566,IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r,cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti)
 	at org.eclipse.persistence.internal.jpa.transaction.EntityTransactionImpl.commit(EntityTransactionImpl.java:157)
 	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:515)
@@ -549,7 +549,7 @@ Internal Exception: java.sql.SQLIntegrityConstraintViolationException: ORA-00001
 
 Error Code: 1
 Call: INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [F31C5CD6-1C7B-41BE-9F1B-D2D6237384C5, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:12:21.912, null, 2016-04-02 09:12:21.912, 1, 51000]
+	bind => [51725FDB-6592-4571-8E8A-BC1D4818A2B9, cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti, 0E4gjaIMZMu7qYDetC7bAwZCg1NPsohkQyMRq4nVZPPSOGBI8r, M9tgMXS37fmRD2CnYVPr1EmpS7OJuhvkpiAxF47d0xElKEuc3m, IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r, 33566, 1, AAAAA, 2016-04-02 09:32:52.017, null, 2016-04-02 09:32:52.017, 1, 51000]
 Query: InsertObjectQuery(33566,IARVLbtcao7C71QlPK1ENIVu1FrkUyIrGYVJ5sJbhUWmIC6c7r,cjvmMxw5CHGUEQlClSuO2USDxEfatliflVJk1feb5Qqe4ebwti)
 	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:331)
 	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:900)

@@ -19,6 +19,7 @@ $include-demoorsal-demoorsal-shared-com-model-aaaboundedcontext-authorization-ap
 $include-demoorsal-demoorsal-shared-com-model-aaaboundedcontext-authorization-rolemenubridgemodel: true;
 $include-demoorsal-demoorsal-shared-com-model-aaaboundedcontext-authorization-rolesmodel: true;
 $include-demoorsal-demoorsal-shared-com-model-aaaboundedcontext-authorization-userrolebridgemodel: true;
+$include-demoorsal-demoorsal-shared-com-model-appinsight-health-appdetailsmodel: true;
 $include-demoorsal-demoorsal-shared-com-model-organizationboundedcontext-contacts-addressmapmodel: true;
 $include-demoorsal-demoorsal-shared-com-model-organizationboundedcontext-contacts-communicationdatamodel: true;
 $include-demoorsal-demoorsal-shared-com-model-organizationboundedcontext-contacts-communicationgroupmodel: true;
@@ -46,6 +47,7 @@ $include-demoorsal-demoorsal-shared-com-model-salesboundedcontext-sales-salesdat
 $include-demoorsal-demoorsal-shared-com-model-salesboundedcontext-sales-salesregionmodel: true;
 $include-demoorsal-demoorsal-shared-com-model-salesboundedcontext-sales-useraccessmodel: true;
 $include-demoorsal-demoorsal-shared-com-viewmodel-aaaboundedcontext-authentication-questionviewmodel: true;
+$include-demoorsal-demoorsal-shared-com-viewmodel-appinsight-health-appdetailsviewmodel: true;
 $include-demoorsal-demoorsal-shared-com-viewmodel-organizationboundedcontext-contacts-communicationgroupviewmodel: true;
 $include-demoorsal-demoorsal-shared-com-viewmodel-organizationboundedcontext-contacts-communicationtypeviewmodel: true;
 $include-demoorsal-demoorsal-shared-com-viewmodel-organizationboundedcontext-contacts-contacttypeviewmodel: true;
@@ -68,6 +70,7 @@ $include-demoorsal-demoorsal-shared-com-viewmodel-salesboundedcontext-sales-reta
 $include-demoorsal-demoorsal-shared-com-viewmodel-salesboundedcontext-sales-salesdataviewmodel: true;
 $include-demoorsal-demoorsal-shared-com-viewmodel-salesboundedcontext-sales-salesregionviewmodel: true;
 $include-demoorsal-demoorsal-web-com-controller-aaaboundedcontext-authentication-questionmaincontroller: true;
+$include-demoorsal-demoorsal-web-com-controller-appinsight-health-appdetailsmaincontroller: true;
 $include-demoorsal-demoorsal-web-com-controller-organizationboundedcontext-contacts-communicationgroupmaincontroller: true;
 $include-demoorsal-demoorsal-web-com-controller-organizationboundedcontext-contacts-communicationtypemaincontroller: true;
 $include-demoorsal-demoorsal-web-com-controller-organizationboundedcontext-contacts-contacttypemaincontroller: true;
@@ -90,6 +93,7 @@ $include-demoorsal-demoorsal-web-com-controller-salesboundedcontext-sales-retail
 $include-demoorsal-demoorsal-web-com-controller-salesboundedcontext-sales-salesdatamaincontroller: true;
 $include-demoorsal-demoorsal-web-com-controller-salesboundedcontext-sales-salesregionmaincontroller: true;
 $include-demoorsal-demoorsal-web-com-view-aaaboundedcontext-authentication-questionmain: true;
+$include-demoorsal-demoorsal-web-com-view-appinsight-health-appdetailsmain: true;
 $include-demoorsal-demoorsal-web-com-view-organizationboundedcontext-contacts-communicationgroupmain: true;
 $include-demoorsal-demoorsal-web-com-view-organizationboundedcontext-contacts-communicationtypemain: true;
 $include-demoorsal-demoorsal-web-com-view-organizationboundedcontext-contacts-contacttypemain: true;

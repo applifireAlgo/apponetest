@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:12:13" hostname="4729df4c0c40" time="0.068">
+<testsuite name="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:32:47" hostname="431ae795be74" time="0.065">
   <properties/>
-  <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.026"/>
+  <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.024"/>
   <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.014"/>
   <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.005"/>
-  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.011"/>
-  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.012"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.01"/>
+  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.009"/>
   <system-out><![CDATA[Setting logged in user info for ADD
-[EL Fine]: sql: 2016-04-02 09:12:13.687--ClientSession(554625751)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Title_M (titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [51B0489B-1E57-4252-8B65-853951234A7E, ecFExPnDw5o8976MLFSFDnaRpvEwsqTLLlmTi1MuWWSNgweiUI, 1, AAAAA, 2016-04-02 09:12:13.683, null, 2016-04-02 09:12:13.683, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:13.695--ClientSession(1044230484)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE ((activeStatus = ?) AND (titleId = ?))
-	bind => [1, 51B0489B-1E57-4252-8B65-853951234A7E]
+[EL Fine]: sql: 2016-04-02 09:32:47.487--ClientSession(463191347)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Title_M (titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [AB4D6C07-05CD-4819-8177-44DD7589C556, ecFExPnDw5o8976MLFSFDnaRpvEwsqTLLlmTi1MuWWSNgweiUI, 1, AAAAA, 2016-04-02 09:32:47.484, null, 2016-04-02 09:32:47.484, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:47.494--ClientSession(1608671487)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE ((activeStatus = ?) AND (titleId = ?))
+	bind => [1, AB4D6C07-05CD-4819-8177-44DD7589C556]
 Setting logged in user info for UPDATE
-[EL Fine]: sql: 2016-04-02 09:12:13.7--ClientSession(367822306)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE (titleId = ?)
-	bind => [51B0489B-1E57-4252-8B65-853951234A7E]
-[EL Fine]: sql: 2016-04-02 09:12:13.702--ClientSession(367822306)--Connection(811598123)--Thread(Thread[Test worker,5,main])--UPDATE ast_Title_M SET titles = ?, updatedBy = ?, versionId = ? WHERE ((titleId = ?) AND (versionId = ?))
-	bind => [bRPMF3Y0u0vktyqDIB1PwjXb8CDJnLvzHn7imaPpks1aWWjCwv, AAAAA, 2, 51B0489B-1E57-4252-8B65-853951234A7E, 1]
-[EL Fine]: sql: 2016-04-02 09:12:13.708--ClientSession(1899680515)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE ((activeStatus = ?) AND (titleId = ?))
-	bind => [1, 51B0489B-1E57-4252-8B65-853951234A7E]
-[EL Fine]: sql: 2016-04-02 09:12:13.727--ClientSession(1029383742)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE (titleId = ?)
-	bind => [51B0489B-1E57-4252-8B65-853951234A7E]
-[EL Fine]: sql: 2016-04-02 09:12:13.729--ClientSession(1029383742)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Title_M WHERE ((titleId = ?) AND (versionId = ?))
-	bind => [51B0489B-1E57-4252-8B65-853951234A7E, 2]
+[EL Fine]: sql: 2016-04-02 09:32:47.5--ClientSession(1466025830)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE (titleId = ?)
+	bind => [AB4D6C07-05CD-4819-8177-44DD7589C556]
+[EL Fine]: sql: 2016-04-02 09:32:47.502--ClientSession(1466025830)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_Title_M SET titles = ?, updatedBy = ?, versionId = ? WHERE ((titleId = ?) AND (versionId = ?))
+	bind => [bRPMF3Y0u0vktyqDIB1PwjXb8CDJnLvzHn7imaPpks1aWWjCwv, AAAAA, 2, AB4D6C07-05CD-4819-8177-44DD7589C556, 1]
+[EL Fine]: sql: 2016-04-02 09:32:47.509--ClientSession(1909772571)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE ((activeStatus = ?) AND (titleId = ?))
+	bind => [1, AB4D6C07-05CD-4819-8177-44DD7589C556]
+[EL Fine]: sql: 2016-04-02 09:32:47.526--ClientSession(1478716535)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE (titleId = ?)
+	bind => [AB4D6C07-05CD-4819-8177-44DD7589C556]
+[EL Fine]: sql: 2016-04-02 09:32:47.528--ClientSession(1478716535)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Title_M WHERE ((titleId = ?) AND (versionId = ?))
+	bind => [AB4D6C07-05CD-4819-8177-44DD7589C556, 2]
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.organizationboundedcontext.contacts.Title.titles may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.organizationboundedcontext.contacts.Title.titles may not be null

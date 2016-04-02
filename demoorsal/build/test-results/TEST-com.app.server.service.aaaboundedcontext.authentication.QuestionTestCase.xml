@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:12:21" hostname="4729df4c0c40" time="0.068">
+<testsuite name="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:32:51" hostname="431ae795be74" time="0.072">
   <properties/>
-  <testcase name="test1Save" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.021"/>
-  <testcase name="test2Update" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.013"/>
+  <testcase name="test1Save" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.022"/>
+  <testcase name="test2Update" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.015"/>
   <testcase name="test3FindById" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.005"/>
-  <testcase name="test5NegativeTesting" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.02"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.022"/>
   <testcase name="test6Delete" classname="com.app.server.service.aaaboundedcontext.authentication.QuestionTestCase" time="0.008"/>
   <system-out><![CDATA[Setting logged in user info for ADD
-[EL Fine]: sql: 2016-04-02 09:12:21.122--ClientSession(1423716109)--Connection(811598123)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Question_M (questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	bind => [473E89A3-735C-4DA1-BB29-DA0D7EF808A2, 11, 7XzbMkn4jVTKRhSV9hJbhTTSew81AJl6YXjT1GKozozDR9xK7Y, uDWrz7dMdo, LzzP83wzL2veye8xEnF8nWoQ8CzLXX913S9sANr16l9yb6Nj6q, 1, AAAAA, 2016-04-02 09:12:21.119, null, 2016-04-02 09:12:21.119, 1, 51000]
-[EL Fine]: sql: 2016-04-02 09:12:21.128--ClientSession(56628006)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE ((activeStatus = ?) AND (questionId = ?))
-	bind => [1, 473E89A3-735C-4DA1-BB29-DA0D7EF808A2]
+[EL Fine]: sql: 2016-04-02 09:32:51.051--ClientSession(313689548)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Question_M (questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [B2EE7105-6795-4933-BE7A-87DB90469741, 11, 7XzbMkn4jVTKRhSV9hJbhTTSew81AJl6YXjT1GKozozDR9xK7Y, uDWrz7dMdo, LzzP83wzL2veye8xEnF8nWoQ8CzLXX913S9sANr16l9yb6Nj6q, 1, AAAAA, 2016-04-02 09:32:51.048, null, 2016-04-02 09:32:51.048, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:51.057--ClientSession(284451544)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE ((activeStatus = ?) AND (questionId = ?))
+	bind => [1, B2EE7105-6795-4933-BE7A-87DB90469741]
 Setting logged in user info for UPDATE
-[EL Fine]: sql: 2016-04-02 09:12:21.133--ClientSession(748231365)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE (questionId = ?)
-	bind => [473E89A3-735C-4DA1-BB29-DA0D7EF808A2]
-[EL Fine]: sql: 2016-04-02 09:12:21.135--ClientSession(748231365)--Connection(811598123)--Thread(Thread[Test worker,5,main])--UPDATE ast_Question_M SET question = ?, questionDetails = ?, questionIcon = ?, updatedBy = ?, versionId = ? WHERE ((questionId = ?) AND (versionId = ?))
-	bind => [baZdGE1P6fGMyCPGP2ddHV3e6ePb2xD3suTPTsfH2LCGIngESp, vyR1RHUbTN, OnO5j8XAzeC5hZ7eduZV4rLAaVoMZOzSlD1IAnPiYEucbhFlsU, AAAAA, 2, 473E89A3-735C-4DA1-BB29-DA0D7EF808A2, 1]
-[EL Fine]: sql: 2016-04-02 09:12:21.141--ClientSession(162679438)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE ((activeStatus = ?) AND (questionId = ?))
-	bind => [1, 473E89A3-735C-4DA1-BB29-DA0D7EF808A2]
-[EL Fine]: sql: 2016-04-02 09:12:21.167--ClientSession(1924684065)--Connection(811598123)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE (questionId = ?)
-	bind => [473E89A3-735C-4DA1-BB29-DA0D7EF808A2]
-[EL Fine]: sql: 2016-04-02 09:12:21.169--ClientSession(1924684065)--Connection(811598123)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Question_M WHERE ((questionId = ?) AND (versionId = ?))
-	bind => [473E89A3-735C-4DA1-BB29-DA0D7EF808A2, 2]
+[EL Fine]: sql: 2016-04-02 09:32:51.063--ClientSession(1192756622)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE (questionId = ?)
+	bind => [B2EE7105-6795-4933-BE7A-87DB90469741]
+[EL Fine]: sql: 2016-04-02 09:32:51.065--ClientSession(1192756622)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_Question_M SET question = ?, questionDetails = ?, questionIcon = ?, updatedBy = ?, versionId = ? WHERE ((questionId = ?) AND (versionId = ?))
+	bind => [baZdGE1P6fGMyCPGP2ddHV3e6ePb2xD3suTPTsfH2LCGIngESp, vyR1RHUbTN, OnO5j8XAzeC5hZ7eduZV4rLAaVoMZOzSlD1IAnPiYEucbhFlsU, AAAAA, 2, B2EE7105-6795-4933-BE7A-87DB90469741, 1]
+[EL Fine]: sql: 2016-04-02 09:32:51.071--ClientSession(771523531)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE ((activeStatus = ?) AND (questionId = ?))
+	bind => [1, B2EE7105-6795-4933-BE7A-87DB90469741]
+[EL Fine]: sql: 2016-04-02 09:32:51.099--ClientSession(1132673530)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE (questionId = ?)
+	bind => [B2EE7105-6795-4933-BE7A-87DB90469741]
+[EL Fine]: sql: 2016-04-02 09:32:51.101--ClientSession(1132673530)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Question_M WHERE ((questionId = ?) AND (versionId = ?))
+	bind => [B2EE7105-6795-4933-BE7A-87DB90469741, 2]
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.aaaboundedcontext.authentication.Question.levelid may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.aaaboundedcontext.authentication.Question.levelid may not be null

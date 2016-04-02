@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.server.service.appinsight.health.AppdetailsTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T09:32:47" hostname="431ae795be74" time="0.057">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.appinsight.health.AppdetailsTestCase" time="0.026"/>
+  <testcase name="test2Update" classname="com.app.server.service.appinsight.health.AppdetailsTestCase" time="0.014"/>
+  <testcase name="test3FindById" classname="com.app.server.service.appinsight.health.AppdetailsTestCase" time="0.005"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.appinsight.health.AppdetailsTestCase" time="0.003"/>
+  <testcase name="test6Delete" classname="com.app.server.service.appinsight.health.AppdetailsTestCase" time="0.008"/>
+  <system-out><![CDATA[Setting logged in user info for ADD
+[EL Fine]: sql: 2016-04-02 09:32:47.351--ClientSession(1579206534)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Appdetails_M (detailhold, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [169D9305-31BD-4B75-B942-3403D890F91B, 1, AAAAA, 2016-04-02 09:32:47.348, null, 2016-04-02 09:32:47.348, 1, 51000]
+[EL Fine]: sql: 2016-04-02 09:32:47.36--ClientSession(817412997)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT detailhold, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Appdetails_M WHERE ((activeStatus = ?) AND (detailhold = ?))
+	bind => [1, 169D9305-31BD-4B75-B942-3403D890F91B]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-04-02 09:32:47.365--ClientSession(1028360150)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT detailhold, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Appdetails_M WHERE (detailhold = ?)
+	bind => [169D9305-31BD-4B75-B942-3403D890F91B]
+[EL Fine]: sql: 2016-04-02 09:32:47.367--ClientSession(1028360150)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--UPDATE ast_Appdetails_M SET updatedBy = ?, versionId = ? WHERE ((detailhold = ?) AND (versionId = ?))
+	bind => [AAAAA, 2, 169D9305-31BD-4B75-B942-3403D890F91B, 1]
+[EL Fine]: sql: 2016-04-02 09:32:47.374--ClientSession(72226745)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT detailhold, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Appdetails_M WHERE ((activeStatus = ?) AND (detailhold = ?))
+	bind => [1, 169D9305-31BD-4B75-B942-3403D890F91B]
+[EL Fine]: sql: 2016-04-02 09:32:47.382--ClientSession(24006233)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--SELECT detailhold, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Appdetails_M WHERE (detailhold = ?)
+	bind => [169D9305-31BD-4B75-B942-3403D890F91B]
+[EL Fine]: sql: 2016-04-02 09:32:47.384--ClientSession(24006233)--Connection(1822933698)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Appdetails_M WHERE ((detailhold = ?) AND (versionId = ?))
+	bind => [169D9305-31BD-4B75-B942-3403D890F91B, 2]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
