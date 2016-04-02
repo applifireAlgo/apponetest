@@ -30,7 +30,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_AddressType_M")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "AddressType", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "AddressType", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "AddressType.DefaultFinders", query = "select e from AddressType e where e.systemInfo.activeStatus=1 and e.addressType LIKE :addressType"), @javax.persistence.NamedQuery(name = "AddressType.findById", query = "select e from AddressType e where e.systemInfo.activeStatus=1 and e.addressTypeId =:addressTypeId") })
 public class AddressType implements Serializable, CommonEntityInterface, Comparator<AddressType> {
 

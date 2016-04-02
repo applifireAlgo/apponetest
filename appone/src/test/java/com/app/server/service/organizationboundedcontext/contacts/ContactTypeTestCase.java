@@ -103,6 +103,7 @@ public class ContactTypeTestCase extends EntityTestCriteria {
 
     private ContactType createContactType(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         ContactType contacttype = new ContactType();
+<<<<<<< HEAD
         contacttype.setContactType("DFcuyxYUllRhWQI3veyK3ccfHNHUCfbo33GQCFhU4XMbdCS7PK");
         contacttype.setContactTypeIcon("EorWOpDtYIHVTNCpdAbhguWO4foxl9lYsbhVU37VQ6SIwsCqEe");
         contacttype.setContactTypeDesc("BnRqMdaMAItMZsRAnlLrAU7kFZ0L1olD4tkNjpajvH0Eyj40TM");
@@ -185,6 +186,90 @@ public class ContactTypeTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "contactType", "K2XEuvH9ThwU1UYXCG52WwjJfyZs5P6vIPcQOrJepSbqXWaXMW9jW1bM8zwBHjV0iXIEKsV2a1uAHEMzp05Qe2u5fUNxRaKsKo8paJUjVQSgPh8uG09iL5KObw8loh29c"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "contactTypeDesc", "zvHeJe3MbXHu3m4Jfe8m4Je1KRoEIzDkDrhHsopXMiTSiu3NsDuPomXkzFdeXl1VkhBPkaQVdc9V18A1IR8Bc3ouBzBScl7zPKyEDiU7HrwpMPVl9q1me2Xaa48dmzED4vLKYQsvB2pyhHFkV1PMYQWdtTZDuD2GZlZjmSLOySjDfC6e7TQl75zaYO0PqKYXlaZZf7l1iGPS4pjFgQSvBjRu8SczZ0Ya1OuM5CRTZcyuzYKWm5qjLMqJuY1Sthwws"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "contactTypeIcon", "8LXpvfRPKzC1XVUHLmD9N9IkqwTwmcM4beOcNri9P5dZX8DFj27pIxm9QonbvmZlMzXgX6sA1KoqsFnQbBq07M23P0kJyguBih9NKaEfenHBGSQKluhNJGdhL1NmvQcMn"));
+=======
+        contacttype.setContactType("0lE3B4NiGc2hukb0passd1Gt3W8JpHgc1b8wEbu6pQdLZSebAg");
+        contacttype.setContactTypeIcon("QL512pty9qMXhYfaelQ115vyGWXrLDfMIxsTui8SKLTm0Ojo9S");
+        contacttype.setContactTypeDesc("TOcfM7T7AO40OWqnAOshrQQSsvz7M3FtBBO5tErK2l96GWIxh6");
+        contacttype.setEntityValidator(entityValidator);
+        return contacttype;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            ContactType contacttype = createContactType(true);
+            contacttype.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            contacttype.isValid();
+            contacttypeRepository.save(contacttype);
+            map.put("ContactTypePrimaryKey", contacttype._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("ContactTypePrimaryKey"));
+            ContactType contacttype = contacttypeRepository.findById((java.lang.String) map.get("ContactTypePrimaryKey"));
+            contacttype.setVersionId(1);
+            contacttype.setContactType("2n3CigjdPGfDEF03OMcadypXaGH8dBvQ9Qzw7nWrz2UVVOiSVv");
+            contacttype.setContactTypeIcon("mSUU1XZ451dfYgu5MhVyFY4gpxOuuEkVIiXqwQOwDPahneabBz");
+            contacttype.setContactTypeDesc("2PoiSWDZswIMDqJ96UQzcpksHaC8BUMWlsjWV4jn0k5a4kUJN2");
+            contacttype.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            contacttypeRepository.update(contacttype);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("ContactTypePrimaryKey"));
+            contacttypeRepository.findById((java.lang.String) map.get("ContactTypePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("ContactTypePrimaryKey"));
+            contacttypeRepository.delete((java.lang.String) map.get("ContactTypePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateContactType(EntityTestCriteria contraints, ContactType contacttype) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            contacttype.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            contacttype.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            contacttype.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            contacttypeRepository.save(contacttype);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "contactType", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "contactType", "mReblPlIGjPlqi3QwfC5yZ6Ayjr0c0duea3K73ETKRn9X3WHAmRnmsMdBaFXmNurh9fm50kycmaI8HY356pamqq9N7nalkiQrVsI6zyzOOCr5VRcGLpCn3H0PvKw8mWDj"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "contactTypeDesc", "3Yjfqsr891Nv96pwo5Q2jY3tzIJWW68rm2YDBZozszsjlQaFMy9xC9ApmdhcweXHO1X7dp6IrKPclDpc020Odm1vTlvM8vAjuIvkyklALMZmndzeF6HowMwvryHd328FRShSjRdK5OYHOTAl3mX8DFSg667ZvKbCkRFynZN2KL3U4iuhR7LhcbQF7Gf9KqZAo9mQfqL4BoTGRykmsKxazrLs3Io5ifRtJgdqQkguepFfNJAkBhoISmzVL9xWfSQz6"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "contactTypeIcon", "v8FMkK1KwdfepOZJj9mAK5sYaFstMx3JT6Va45GR5pHsjrrcKcYt1ggCHOJPy8Ts3GS8xeXRhNWo61DtKWUdMIDKExKzPSNVJGhwDlLWZ0tE6Mw7ySfKllbbMbMRfOXs3"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

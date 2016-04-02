@@ -103,6 +103,7 @@ public class QuestionTestCase extends EntityTestCriteria {
 
     private Question createQuestion(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         Question question = new Question();
+<<<<<<< HEAD
         question.setQuestionDetails("vW2TnJ1IPT");
         question.setQuestion("aGLKcyma8lUFIrktLDVsW0slEnQGFSEtj1PzdkwKyfunJ7kCoX");
         question.setLevelid(6);
@@ -189,6 +190,94 @@ public class QuestionTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "question", "6nzDuetZnKfOkwQCWZdpqS9rkQnns2f76Msq1bYUFxXX1dQojdHlqLiNslV0NcinfbyMOkZ7kpdtJBEKrH0JKfS4eQJB5UqsBiF0gqdWtEqajPCjHqU5GY5F7xuZ5nAwgyIEla06Tonbpurn5Q0tEX597SB5Zi8NDDNGObMS55VzUycZapvKJT7JJGhSISBIh1kFEHmJ4XeVzQN8EjnwXdFR5LLtNqK2vJMLzfVk7nClqfRYaTyJLywrKaQbe6L0Q"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "questionDetails", ""));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "questionIcon", "vowGurbP7R7Rc0OOjsTSaRGiAe6CxwfWIsXX4fzL1jj6kCR74yBsWy2E8kSUxgRdD"));
+=======
+        question.setQuestionDetails("awX5iJdpLG");
+        question.setQuestion("xpT3YmqGGp1Ox204yLs0KbC9D1ldTBgd6g6HdMRey160ZaESdb");
+        question.setLevelid(6);
+        question.setQuestionIcon("oG15FFtqzM5UylFZ7aTU5kR0qMBAs11GGFi6nj5JqYv31TBgbp");
+        question.setEntityValidator(entityValidator);
+        return question;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            Question question = createQuestion(true);
+            question.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            question.isValid();
+            questionRepository.save(question);
+            map.put("QuestionPrimaryKey", question._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("QuestionPrimaryKey"));
+            Question question = questionRepository.findById((java.lang.String) map.get("QuestionPrimaryKey"));
+            question.setQuestionDetails("geCJZ1yQUc");
+            question.setQuestion("uwcVdj926xbRpQqaJol0gI2L8wMCdLmQUEvFgqtRIOfaS05jsl");
+            question.setVersionId(1);
+            question.setLevelid(1);
+            question.setQuestionIcon("EIp1R8CKXtQM0YIaj0g56Nhp4b8mOPM7wbHNF9q9lYaoAhKRap");
+            question.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            questionRepository.update(question);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("QuestionPrimaryKey"));
+            questionRepository.findById((java.lang.String) map.get("QuestionPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("QuestionPrimaryKey"));
+            questionRepository.delete((java.lang.String) map.get("QuestionPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateQuestion(EntityTestCriteria contraints, Question question) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            question.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            question.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            question.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            questionRepository.save(question);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "levelid", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "levelid", 17));
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 3, "question", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "question", "UPClZB1ztTl6x4RILkAQ5SReHYOW4GbB8sQCjRTPMwBAN5C51lK5zXtK9gdDgs4kW3bRHxpqBLAgk7HedHKwGYNp7p0tQ9fFxYLG8ylEn33efR3wC8EmzNGv6VVZgiO98H6FCdRvz8LeBoXASeQlSVzxV2cmmqtNOxv6s15KUYntky5bPofxKsayyuGsXg0zVc4JylcmDkCVBmW0EOwfYmPQQ8btRPMhKnvZsgh6zEHQjXWlCML7k1zsMW49tp2WK"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "questionDetails", ""));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "questionIcon", "3DFC6BjZDJd2ykfdeudYpjXzhZTvvgJwOPKt0aV7QVa5Qtms2PWCxdV1wYxiiMDYM"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

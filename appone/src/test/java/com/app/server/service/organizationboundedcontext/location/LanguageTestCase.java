@@ -103,6 +103,7 @@ public class LanguageTestCase extends EntityTestCriteria {
 
     private Language createLanguage(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         Language language = new Language();
+<<<<<<< HEAD
         language.setLanguage("0RIDTwjmAofiGoDGvSUkcnRqiP8Pu0eWA80tQlEd8K7RyvW6YZ");
         language.setAlpha4parentid(9);
         language.setLanguageDescription("BecAXkDoUvIQUWYIBkpj4tSKbzzSwCCbV5NX9l4bE2reTzVZOZ");
@@ -200,6 +201,105 @@ public class LanguageTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "alpha3", "ZJLm"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "alpha4", "U2RAH"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "alpha4parentid", 17));
+=======
+        language.setLanguage("4JKfXT9Dj63c8NAvOPBtFGJLv3U7J1Do4PwJWYkAE0z6Z111tX");
+        language.setAlpha4parentid(8);
+        language.setLanguageDescription("j74qjG0vu0YW8XS4678mLNhhdbqRXdzXe5CPROqQ2mMfYAFn0J");
+        language.setLanguageType("19A8WfnSN1KOPnakM1qdMN6cwmQdCFSf");
+        language.setAlpha4("YIht");
+        language.setLanguageIcon("5Li8RA4kTYKvFZPbozsMDtAkV9hfRDEWJNJ0AcPLQCKB4RkV3H");
+        language.setAlpha3("Q7w");
+        language.setAlpha2("6o");
+        language.setEntityValidator(entityValidator);
+        return language;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            Language language = createLanguage(true);
+            language.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            language.isValid();
+            languageRepository.save(language);
+            map.put("LanguagePrimaryKey", language._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("LanguagePrimaryKey"));
+            Language language = languageRepository.findById((java.lang.String) map.get("LanguagePrimaryKey"));
+            language.setLanguage("8iEUJiijVPjb3CBPJZAdstJTWd3J6C8z9zSeKgNcN9wlt9ZJW3");
+            language.setVersionId(1);
+            language.setAlpha4parentid(5);
+            language.setLanguageDescription("ZZcoJ3RbiVYbtbWBNx9aUTAk1KVDFRJXwYNG6qub2Jb88Cs9lV");
+            language.setLanguageType("QHOqkaHy3HmlXs7M3cFVf8gwRTAeM1Th");
+            language.setAlpha4("vRzk");
+            language.setLanguageIcon("yQogh4MZtq60oKejLTmtRURj1fApagPdcmF7UiGeCYiXRe0V6G");
+            language.setAlpha3("LUJ");
+            language.setAlpha2("Ts");
+            language.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            languageRepository.update(language);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("LanguagePrimaryKey"));
+            languageRepository.findById((java.lang.String) map.get("LanguagePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("LanguagePrimaryKey"));
+            languageRepository.delete((java.lang.String) map.get("LanguagePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateLanguage(EntityTestCriteria contraints, Language language) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            language.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            language.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            language.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            languageRepository.save(language);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "language", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "language", "ufiJjP934icBnxMeUsJd43AECglAeHuik9kfeyYMKVMhfbDBWColafkFQ6t9Xw72um3SSjDqDd1Is4VyQoSRudHWd3ln9YZRi6Ct1e4THjWuaK0e99EET0e9s72ynKdZmg8GntB3u31wNLbR2To2xnFR0jtvWJH6q3qbECfEfvrEqanAMJfby4cVTXDEZAV9WWw0QmpngDrKmnkoxIZ0h5J4SL5t1976nRQdBbPwKlSAfoV0FVTB7uaPpVvUwoMwc"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "languageType", "HTPmb9cOJfC5iN7AAcFkpr5G8sLZeSnLd"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "languageDescription", "Hkxp0s2XRZVjWjV2v2ax6IYhq9FhMH2X5agb9J6mvFmvGL5qvaAmIFMNoMRyIqtozX0xUYpkQmIBrHPgdX0YAD7kYgzZQr0x8XldllWnv2VDHLHPCOEIqHBJ57FKbuxmoLRcUF9MLxFxiTluMD7aDCYRAYpXtoLmchmD68HsZqbqohzLjfUS6eT0UpPEHc1AjRgYLwWwArSKUuRNwkhRdolRHpEuPTbcIvVjePjub4KZrKHPTqAxD5sdNbaY7bTlc"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "languageIcon", "hCSlDPTMfHLfgqdWK56OCt6To22DvCQuRP5HxwGiivpNv8AOiNZmmD5E1W22yBLZ2cGclHv76TpKnu51DlkjyxlWCMCKHvxsE7EsZsJJ641OtJU2hBPpSOeDW1se5iTcl"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "alpha2", "5Kx"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "alpha3", "prTB"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "alpha4", "suGcY"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "alpha4parentid", 14));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

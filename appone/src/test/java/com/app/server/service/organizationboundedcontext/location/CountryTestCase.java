@@ -103,6 +103,7 @@ public class CountryTestCase extends EntityTestCriteria {
 
     private Country createCountry(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         Country country = new Country();
+<<<<<<< HEAD
         country.setCountryFlag("3lG4iNefO0nuTKzlqbQyuoNWwdwYCWGKCT2ti2b8lzMPqUEnhq");
         country.setCurrencyCode("YOC");
         country.setIsoNumeric(365);
@@ -209,6 +210,114 @@ public class CountryTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 10, "capitalLatitude", 12));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 11, "capitalLongitude", 14));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 12, "isoNumeric", 1784));
+=======
+        country.setCountryFlag("Cyx9qbLbPIZADLwRkhMeWpolF61uNuEfb9OXJe1um7KfYa8508");
+        country.setCurrencyCode("Wrr");
+        country.setIsoNumeric(415);
+        country.setCapitalLongitude(6);
+        country.setCountryCode2("opy");
+        country.setCountryName("I200hbor6jhoTGVuW9R9grLcLU9q9FSiKvrxT7sIp3CLnOZAeR");
+        country.setCurrencySymbol("d4uh3qabOdiLNx6uPFZWGtota7a4HxXl");
+        country.setCountryCode1("Ja9");
+        country.setCapital("NwawlWu88aMwe9YUcEzTmx1JwiyxaaNH");
+        country.setCurrencyName("OCRmHwv1wRbAF7agLkhyHKe7eT8sn7puhJEQI9spoBYFxY7tK2");
+        country.setCapitalLatitude(5);
+        country.setEntityValidator(entityValidator);
+        return country;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            Country country = createCountry(true);
+            country.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            country.isValid();
+            countryRepository.save(country);
+            map.put("CountryPrimaryKey", country._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("CountryPrimaryKey"));
+            Country country = countryRepository.findById((java.lang.String) map.get("CountryPrimaryKey"));
+            country.setCountryFlag("PZutEVdkDUEjs86xKY1UnrS0DuVl1GGk4veYybGuA3sZeS5KLA");
+            country.setCurrencyCode("cW3");
+            country.setIsoNumeric(474);
+            country.setCapitalLongitude(9);
+            country.setCountryCode2("YO9");
+            country.setCountryName("FtlTbJ9eR7IIKmslW5F74ZRYq6Kf4x9mpYNlpoVkAlUtm2tcnF");
+            country.setCurrencySymbol("GaShGOCc81sZFseKZGlGM253NXiFvpLX");
+            country.setCountryCode1("ASa");
+            country.setCapital("MvF09xlm6mlFellDgBZ3SANjmslPO8G4");
+            country.setCurrencyName("3MPz3FRqmvxlGrZHmsD2l0Yna5yJlxUEGVVux06eiA9tbnxGAL");
+            country.setVersionId(1);
+            country.setCapitalLatitude(5);
+            country.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            countryRepository.update(country);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("CountryPrimaryKey"));
+            countryRepository.findById((java.lang.String) map.get("CountryPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("CountryPrimaryKey"));
+            countryRepository.delete((java.lang.String) map.get("CountryPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateCountry(EntityTestCriteria contraints, Country country) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            country.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            country.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            country.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            countryRepository.save(country);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "countryName", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "countryName", "hvR7q3lbKmM7fD3ZLmaCNcUB95Y38SZDYJW7Zgb9FrwHlTcsl5U0qqwpQKdKvBWMyGyQk11XPWQxbevW0WKsAQJIkjAIRxJIk3I9rlfnysKedyNT8Khgt8Vqhx0TdiQVN"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "countryCode1", "WViE"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "countryCode2", "oFRg"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "countryFlag", "UyLgWjRsTxp8pYUvZSwz48gjrpJ0tYiJxz6He0HYSCKA7KAPnMaishjKmWxTipszK"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "capital", "WKdnTCOlThicd0VkjtaqV0w53HKHeZ4ar"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "currencyCode", "wJew"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "currencyName", "L4q9z5k700bMKu09uxn507N9yQSmVovjZSFElAvvuyXzQ8mArvWTCXU5NnmCtPuD1YgIiCE9PPNa8tioxuNh28ZsOKRSzC6ECya4rRjjapD0COdVZ4J3hbbUF3s9KGdM3"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "currencySymbol", "LfVyO0WRzoohIbLi1ruLnseXn7XCFPuC7"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 10, "capitalLatitude", 21));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 11, "capitalLongitude", 18));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 12, "isoNumeric", 1743));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

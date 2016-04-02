@@ -29,7 +29,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_UserRoleBridge_T")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "UserRoleBridge", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "UserRoleBridge", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "UserRoleBridge.findByRoleId", query = "select e from UserRoleBridge e where e.systemInfo.activeStatus=1 and e.roleId=:roleId"), @javax.persistence.NamedQuery(name = "UserRoleBridge.findByUserId", query = "select e from UserRoleBridge e where e.systemInfo.activeStatus=1 and e.userId=:userId"), @javax.persistence.NamedQuery(name = "UserRoleBridge.findById", query = "select e from UserRoleBridge e where e.systemInfo.activeStatus=1 and e.roleUserMapId =:roleUserMapId") })
 public class UserRoleBridge implements Serializable, CommonEntityInterface, Comparator<UserRoleBridge> {
 

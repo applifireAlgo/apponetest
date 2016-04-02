@@ -104,6 +104,7 @@ public class PasswordAlgoTestCase extends EntityTestCriteria {
     private PasswordAlgo createPasswordAlgo(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         PasswordAlgo passwordalgo = new PasswordAlgo();
         passwordalgo.setAlgorithm(5);
+<<<<<<< HEAD
         passwordalgo.setAlgoHelp("w1VtfpL8sayD9ii217wYEMM5eV8HhUcM356WJFt9QB1MHIbP43");
         passwordalgo.setAlgoName("LNn18GBmzF9Er5qhganohWvEWvDC7LBo9T0olpk0ftnjARcABP");
         passwordalgo.setAlgoDescription("8jOyc8rzocLdxO7YqsPW8SEFZuaLHAhnwURXpFtRH54sfcvrzo");
@@ -192,6 +193,96 @@ public class PasswordAlgoTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "algoDescription", "H2EmFwQSWT9GQXv1UpviA952p4nCawS13H2aeijOIWqLB0pow6GHlai5b7yDeVPG6JDxoMtK85LzvnpohJHyqgyp6hTL5YVZGRNtPOdiZpFiXA1JhUqfDFO3dlZky7FlOALeSkRHD2yOaUTKJSlCPXokrlQiBueFAcjIIyIPl07TVkG6Lycz6BERmgQl5ojnUqnDbc3dTED3dK5YPA1cfq9XuK1zTpTkqychO3Z3qkdSgG9FVefhboKNIvgfyDWrS"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "algoIcon", "4wkdfZ0a7bVfFQ77560nh2CokORb0G9554EEj9eapHEdwtoYr138WpjyAiugZiocN"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "algoHelp", "K1dK3UXCUYbwv1wS2S2eatEnIG0ylylH65OsWTHg8HMJyz3RbDg9C4qtKiUzCA1VoTk15U0ntsdbXDzA1UfGdF23Q4js5NZHme74pWzMSpuNbP2jWQcmO601sfQ81EVQ5MSSVMGIdjkGIes6YPC3gkrhpuYojqwD8yW9JvpoOlUeze4BFOBccNpYEpArJxPCJOG4K2wHr7zpZFEw8loXKa25UMMr8hGjTOnynqdHolMjA84yV5yO5sZczpjEBdJRF"));
+=======
+        passwordalgo.setAlgoHelp("tBThbsh053rxZsHDSELw4W58xTYN4YOYQ6p4Ie9v7xK5KAB5xN");
+        passwordalgo.setAlgoName("M5ZzfaR29yoXuHg9h5p0G0XyJxIXYZ57CUFC6DoJHAYWFHrEVp");
+        passwordalgo.setAlgoDescription("qdVptjXFsaVGiJxyfKXvkWrH0j9iLf36NsEKIaaWdqPkMv68FN");
+        passwordalgo.setAlgoIcon("JaHcx3nWSAzWjREsLXO3Xd8g1Lu1qkVE56rj6zX9HxEjCr1m1e");
+        passwordalgo.setEntityValidator(entityValidator);
+        return passwordalgo;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            PasswordAlgo passwordalgo = createPasswordAlgo(true);
+            passwordalgo.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            passwordalgo.isValid();
+            passwordalgoRepository.save(passwordalgo);
+            map.put("PasswordAlgoPrimaryKey", passwordalgo._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("PasswordAlgoPrimaryKey"));
+            PasswordAlgo passwordalgo = passwordalgoRepository.findById((java.lang.String) map.get("PasswordAlgoPrimaryKey"));
+            passwordalgo.setVersionId(1);
+            passwordalgo.setAlgorithm(9);
+            passwordalgo.setAlgoHelp("3SwTecI1NWnDxMO81Z1pF6ArOz27quqo17QrbHdQ9sMZqJZXc3");
+            passwordalgo.setAlgoName("syIZeKD0uoivBB2T4r80VkKX9swmVZPRUvme5fFiq8Yq4YaloS");
+            passwordalgo.setAlgoDescription("mzTEnUeOOetsAEmtu3CITul6mz3UrgsKhtwMLTcMyIs2GIAP4G");
+            passwordalgo.setAlgoIcon("XV2aLpw8ryrhk57LnAGSXIv8eEgtMvVyLK8yxCKIkUgBGnvYCz");
+            passwordalgo.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            passwordalgoRepository.update(passwordalgo);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("PasswordAlgoPrimaryKey"));
+            passwordalgoRepository.findById((java.lang.String) map.get("PasswordAlgoPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("PasswordAlgoPrimaryKey"));
+            passwordalgoRepository.delete((java.lang.String) map.get("PasswordAlgoPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validatePasswordAlgo(EntityTestCriteria contraints, PasswordAlgo passwordalgo) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            passwordalgo.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            passwordalgo.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            passwordalgo.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            passwordalgoRepository.save(passwordalgo);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "algorithm", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "algorithm", 16));
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 3, "algoName", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "algoName", "AQKV0Fy2XbyYObLDj7EEwlwbCBSge045RlXJ7aAd4WcnTl6VcDM7gpStfFQHjOjFetCVHlhJ4NjRU9B0eY9GPeDqwguq4JOteE18wj7qyXsFaklyl1vOW0kYVrs2vJTulpC2r3zZzEzzyWFRNQywH5UW62tqrw7vZ4lUExvJIbnOK8K5gF6fm1TSIJTyJtQQl5CTLyco59H3bLxAB9XHfi91WmDR94k2c5tGYRwHdRbfSOg9LGuPCGhduCtJj9q8b"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "algoDescription", "qjUkiCGUraz764MAoigTdR80dK84a2MTeeZ9mPUERsyupZLyhrvn5rb5ZCJTNOCbc9kd0UXiLrAAL2DNUYb8ieu1HprGSUtnOsBGMusry4mqNFpA9LTtnKkGLfY0LeKIE80dJw0lQ95WAZlQYdIbDusDZhSiklzOhRBtWBLOflp3j0CdECo6o5FP3vJiX19rHAO8LPNfygYbvKk6L5wXhmMciOwbPm8Tu0sLftHA9u1SaGz5kexmKh9EnO6HzRbBU"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "algoIcon", "bxHxLX91Fw67E0U593tycLstMZohl8AI6wSYkv1kNI5JijEIA3iicWOEobw2viotk"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "algoHelp", "Qt50hVGx85eZ53zh3ffqEh2tSNadSNgNupA457hn40ig3AA6fmtY7NJ9j7U0SkbBCGBunzr8F2EfiEqb3nfS7msuHBZdekB7jUTP9UbSpp6wx89yLOIHDDiiCW0LxbLYnZZl04Pb2W8kA9MN2Z8u7XMQKAfAN15ykcgNMdswr9gbg8xW2VQYbgsWv3nw8BzP81NSjKEt5h4pHcGECyLPDiytgQh6Mbz9meavF2nJIZ2JLEinVbcSnkCv2ORFBvPLc"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

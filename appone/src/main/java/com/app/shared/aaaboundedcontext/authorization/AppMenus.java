@@ -32,7 +32,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_AppMenus_M")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "AppMenus", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "AppMenus", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "AppMenus.DefaultFinders", query = "select e from AppMenus e where e.systemInfo.activeStatus=1 and e.menuAccessRights BETWEEN :minmenuAccessRights AND :maxmenuAccessRights"), @javax.persistence.NamedQuery(name = "AppMenus.findById", query = "select e from AppMenus e where e.systemInfo.activeStatus=1 and e.menuId =:menuId") })
 public class AppMenus implements Serializable, CommonEntityInterface, Comparator<AppMenus> {
 

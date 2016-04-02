@@ -111,6 +111,7 @@ public class UserTestCase extends EntityTestCriteria {
 
     private User createUser(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         UserAccessDomain useraccessdomain = new UserAccessDomain();
+<<<<<<< HEAD
         useraccessdomain.setDomainDescription("UBkL0FqQJpIyA2WMagVxdEg99PenH7uzAvuhOzMBviHmcz9QxV");
         useraccessdomain.setDomainName("72pKIZCRGakPPb82k6iInhu3bedTEWyfYLVWac26U1E1gh3i27");
         useraccessdomain.setDomainIcon("Fquhpkn4JBomIZD1VDXYt8voMVNPeRN9WifrCT2yJbDFGNLSZh");
@@ -267,6 +268,164 @@ public class UserTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "changePasswordNextLogin", 2));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "passwordAlgo", "6xClEbpwK7uahAmbv1NLUTXeUXDos26z7Rbx675X2goxYE1Z6QpbwpR3OEFvc5YJ4"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "sessionTimeout", 3621));
+=======
+        useraccessdomain.setDomainDescription("PZAuDktRVLq6JI2wY7M0pEfgD4HlkEKjDzG0hawVXXAzinq70x");
+        useraccessdomain.setDomainName("QSA9a3UY8q8Rqp7mmV7pPWiEUm3doKXqkUp7gopI5y8Uks1UNW");
+        useraccessdomain.setDomainIcon("jzFIuTNt5ZeywaDIEu9GGJ4TmrY5zeP1dIIjc6ZyytRm3cfKCo");
+        useraccessdomain.setUserAccessDomain(valueGenerator.getRandomInteger(99999, 0));
+        useraccessdomain.setDomainHelp("K9l6wtgTV96lug3CnwZK2hKf7cKL2YkDOCNFCsSTrfNBbLbDyV");
+        UserAccessDomain UserAccessDomainTest = new UserAccessDomain();
+        if (isSave) {
+            UserAccessDomainTest = useraccessdomainRepository.save(useraccessdomain);
+            map.put("UserAccessDomainPrimaryKey", useraccessdomain._getPrimarykey());
+        }
+        UserAccessLevel useraccesslevel = new UserAccessLevel();
+        useraccesslevel.setLevelName("HOTGCzC5mWrqnhDA0pMjZmA2FFBs72XVQpVm18AWYMc5EfSnrp");
+        useraccesslevel.setLevelHelp("9KQZ4RuAzAdGNXBRQ9f2eOqVeJ4svOLVhVTFjOgY63nMqeLsOv");
+        useraccesslevel.setLevelDescription("6R4gnnyOTABnGmM8kN7GaK8Rn4ZAh8MkZMvIBxZ46VWYbZHLaO");
+        useraccesslevel.setUserAccessLevel(valueGenerator.getRandomInteger(99999, 0));
+        useraccesslevel.setLevelIcon("8OLXxeTCzYnYWaCHlTf0VHR1xHBrBdQusPhHaeZoiw9i4e1iqP");
+        UserAccessLevel UserAccessLevelTest = new UserAccessLevel();
+        if (isSave) {
+            UserAccessLevelTest = useraccesslevelRepository.save(useraccesslevel);
+            map.put("UserAccessLevelPrimaryKey", useraccesslevel._getPrimarykey());
+        }
+        User user = new User();
+        user.setSessionTimeout(1580);
+        user.setChangePasswordNextLogin(1);
+        user.setIsDeleted(1);
+        user.setAllowMultipleLogin(1);
+        user.setGenTempOneTimePassword(1);
+        user.setMultiFactorAuthEnabled(1);
+        user.setPasswordAlgo("2BaZctjs4dh7SREUAfgJ7noccImxkxScvOgEePuWexaotx5ttW");
+        user.setUserAccessDomainId((java.lang.String) UserAccessDomainTest._getPrimarykey()); /* ******Adding refrenced table data */
+        user.setUserAccessLevelId((java.lang.String) UserAccessLevelTest._getPrimarykey()); /* ******Adding refrenced table data */
+        user.setPasswordExpiryDate(new java.sql.Timestamp(1459520623373l));
+        user.setUserAccessCode(45817);
+        user.setLastPasswordChangeDate(new java.sql.Timestamp(1459520623373l));
+        user.setIsLocked(1);
+        java.util.List<PassRecovery> listOfPassRecovery = new java.util.ArrayList<PassRecovery>();
+        PassRecovery passrecovery = new PassRecovery();
+        Question question = new Question();
+        question.setQuestionDetails("KhcrK3iy08");
+        question.setQuestion("L84xTkubfbooQ00m5CbQJc6L3iQfpqoN2Zq2tba09S0y9H3rLw");
+        question.setLevelid(9);
+        question.setQuestionIcon("1rurLAPBz5036HJZOfqDb5yhVG1oHk9CNfgVOlTyQKlkqIvXH5");
+        Question QuestionTest = new Question();
+        if (isSave) {
+            QuestionTest = questionRepository.save(question);
+            map.put("QuestionPrimaryKey", question._getPrimarykey());
+        }
+        passrecovery.setUser(user);
+        passrecovery.setQuestionId((java.lang.String) QuestionTest._getPrimarykey());
+        passrecovery.setAnswer("ABrMLw2ZkZMoVkj9zS6xuDRy2ClffA8INSd9KB81OZSz4jYV5p");
+        listOfPassRecovery.add(passrecovery);
+        user.addAllPassRecovery(listOfPassRecovery);
+        UserData userdata = new UserData();
+        userdata.setOneTimePasswordGenDate(new java.sql.Timestamp(1459520623781l));
+        userdata.setOneTimePassword("X2G3g5PIYO4wpQDLiIAURQjTM8Mhmfgn");
+        userdata.setOneTimePasswordGenDate(new java.sql.Timestamp(1459520623805l));
+        userdata.setOneTimePassword("eN7h0LSvJITo25VuWcZYn9zSxUm5tTtP");
+        userdata.setUser(user);
+        userdata.setPassword("r5UPUDflBl3qgPbonV7VMgRTPL5o6Sge1SCKsCtB4pkUC7G6HV");
+        userdata.setOneTimePasswordExpiry(1);
+        userdata.setLast5Passwords("BjLBsNU6a5S8QDrNyaaX2CberPMiTlqHQwtnQeN4aepvSg9FsG");
+        user.setUserData(userdata);
+        user.setEntityValidator(entityValidator);
+        return user;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            User user = createUser(true);
+            user.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            user.isValid();
+            userRepository.save(user);
+            map.put("UserPrimaryKey", user._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Autowired
+    private UserAccessDomainRepository<UserAccessDomain> useraccessdomainRepository;
+
+    @Autowired
+    private UserAccessLevelRepository<UserAccessLevel> useraccesslevelRepository;
+
+    @Autowired
+    private QuestionRepository<Question> questionRepository;
+
+    @Test
+    public void test2findByuserAccessDomainId() {
+        try {
+            java.util.List<User> listofuserAccessDomainId = userRepository.findByUserAccessDomainId((java.lang.String) map.get("UserAccessDomainPrimaryKey"));
+            if (listofuserAccessDomainId.size() == 0) {
+                org.junit.Assert.fail("Query did not return any records.");
+            }
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2findByuserAccessLevelId() {
+        try {
+            java.util.List<User> listofuserAccessLevelId = userRepository.findByUserAccessLevelId((java.lang.String) map.get("UserAccessLevelPrimaryKey"));
+            if (listofuserAccessLevelId.size() == 0) {
+                org.junit.Assert.fail("Query did not return any records.");
+            }
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("UserPrimaryKey"));
+            userRepository.delete((java.lang.String) map.get("UserPrimaryKey")); /* Deleting refrenced data */
+            questionRepository.delete((java.lang.String) map.get("QuestionPrimaryKey")); /* Deleting refrenced data */
+            useraccesslevelRepository.delete((java.lang.String) map.get("UserAccessLevelPrimaryKey")); /* Deleting refrenced data */
+            useraccessdomainRepository.delete((java.lang.String) map.get("UserAccessDomainPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateUser(EntityTestCriteria contraints, User user) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            user.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            user.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            user.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            userRepository.save(user);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 1, "userAccessCode", 89708));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "multiFactorAuthEnabled", 2));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "genTempOneTimePassword", 2));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "allowMultipleLogin", 2));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "isLocked", 2));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "isDeleted", 2));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "changePasswordNextLogin", 2));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "passwordAlgo", "RkzvBhexoIGAuIZEOy2VlEou1KkaF2te7QkjC9UXSPK06ldM4Y4doGzhZl3SA5pph"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "sessionTimeout", 6815));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

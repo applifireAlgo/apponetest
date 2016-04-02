@@ -30,7 +30,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_CommunicationType_M")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "CommunicationType", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "CommunicationType", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "CommunicationType.DefaultFinders", query = "select e from CommunicationType e where e.systemInfo.activeStatus=1 and e.commTypeName LIKE :commTypeName"), @javax.persistence.NamedQuery(name = "CommunicationType.findByCommGroupId", query = "select e from CommunicationType e where e.systemInfo.activeStatus=1 and e.commGroupId=:commGroupId"), @javax.persistence.NamedQuery(name = "CommunicationType.findById", query = "select e from CommunicationType e where e.systemInfo.activeStatus=1 and e.commType =:commType") })
 public class CommunicationType implements Serializable, CommonEntityInterface, Comparator<CommunicationType> {
 

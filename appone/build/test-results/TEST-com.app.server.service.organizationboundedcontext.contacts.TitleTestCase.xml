@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T06:44:13" hostname="cca3c83ae841" time="0.088">
   <properties/>
   <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.03"/>
@@ -22,6 +23,31 @@ Setting logged in user info for UPDATE
 	bind => [8A7F8425-6EA4-47AD-AE2A-B1584330B54A]
 [EL Fine]: sql: 2016-04-02 06:44:13.333--ClientSession(1313776513)--Connection(432729881)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Title_M WHERE ((titleId = ?) AND (versionId = ?))
 	bind => [8A7F8425-6EA4-47AD-AE2A-B1584330B54A, 2]
+=======
+<testsuite name="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-01T14:54:17" hostname="be9119dbb530" time="0.106">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.041"/>
+  <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.019"/>
+  <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.007"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.024"/>
+  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.contacts.TitleTestCase" time="0.013"/>
+  <system-out><![CDATA[Setting logged in user info for ADD
+[EL Fine]: sql: 2016-04-01 14:54:17.793--ClientSession(1390461597)--Connection(46030963)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Title_M (titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [9736232D-63EF-458E-82F9-F4EADBC8E3B4, rehNWz6LyknAEuQlJFLJZUnDVAs5TFhjHruATn5tKBfNGeKJ48, 1, AAAAA, 2016-04-01 14:54:17.787, null, 2016-04-01 14:54:17.787, 1, 51000]
+[EL Fine]: sql: 2016-04-01 14:54:17.804--ClientSession(136247994)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE ((activeStatus = ?) AND (titleId = ?))
+	bind => [1, 9736232D-63EF-458E-82F9-F4EADBC8E3B4]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-04-01 14:54:17.811--ClientSession(1990691166)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE (titleId = ?)
+	bind => [9736232D-63EF-458E-82F9-F4EADBC8E3B4]
+[EL Fine]: sql: 2016-04-01 14:54:17.814--ClientSession(1990691166)--Connection(46030963)--Thread(Thread[Test worker,5,main])--UPDATE ast_Title_M SET titles = ?, updatedBy = ?, versionId = ? WHERE ((titleId = ?) AND (versionId = ?))
+	bind => [2khavm8lX46cnaBIQZuE2JD1XCOoQAPGXkXqTqdwZUkX3giVNq, AAAAA, 2, 9736232D-63EF-458E-82F9-F4EADBC8E3B4, 1]
+[EL Fine]: sql: 2016-04-01 14:54:17.823--ClientSession(611504997)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE ((activeStatus = ?) AND (titleId = ?))
+	bind => [1, 9736232D-63EF-458E-82F9-F4EADBC8E3B4]
+[EL Fine]: sql: 2016-04-01 14:54:17.855--ClientSession(2143116835)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT titleId, titles, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Title_M WHERE (titleId = ?)
+	bind => [9736232D-63EF-458E-82F9-F4EADBC8E3B4]
+[EL Fine]: sql: 2016-04-01 14:54:17.857--ClientSession(2143116835)--Connection(46030963)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Title_M WHERE ((titleId = ?) AND (versionId = ?))
+	bind => [9736232D-63EF-458E-82F9-F4EADBC8E3B4, 2]
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.organizationboundedcontext.contacts.Title.titles may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.organizationboundedcontext.contacts.Title.titles may not be null

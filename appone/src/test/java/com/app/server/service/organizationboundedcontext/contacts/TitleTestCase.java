@@ -103,6 +103,7 @@ public class TitleTestCase extends EntityTestCriteria {
 
     private Title createTitle(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         Title title = new Title();
+<<<<<<< HEAD
         title.setTitles("2CN6dWmHl1EBBLHSm4ArvYxaQRn1yw6objrDGo9c3fpT88bWSH");
         title.setEntityValidator(entityValidator);
         return title;
@@ -179,6 +180,84 @@ public class TitleTestCase extends EntityTestCriteria {
         List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
         entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "titles", null));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "titles", "5ewBWPcFE5T1dQc5bGrKgEpF6OJlOhx6GsRlAYiiVen4lFoDyP5AqUKDg5UYNNup7CoOLLdkdQdJCd3vXMxV6B0RkGnJGspuwnui8ep6nOQIBIPA5gnZU9tUTQrQBOEsHwQWc9AT3jWRX6CILEB7BXhsFDPQoNPZ4WJITH82PMZgeng8q0uTAPqxsovWU7Q4j2dGdnk0S2GgQOzrLYweJeHLKZ2eupjRbwEyS1MfthhV7TxoWHRj4WkkjxUlCjaBK"));
+=======
+        title.setTitles("rehNWz6LyknAEuQlJFLJZUnDVAs5TFhjHruATn5tKBfNGeKJ48");
+        title.setEntityValidator(entityValidator);
+        return title;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            Title title = createTitle(true);
+            title.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            title.isValid();
+            titleRepository.save(title);
+            map.put("TitlePrimaryKey", title._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("TitlePrimaryKey"));
+            Title title = titleRepository.findById((java.lang.String) map.get("TitlePrimaryKey"));
+            title.setVersionId(1);
+            title.setTitles("2khavm8lX46cnaBIQZuE2JD1XCOoQAPGXkXqTqdwZUkX3giVNq");
+            title.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            titleRepository.update(title);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("TitlePrimaryKey"));
+            titleRepository.findById((java.lang.String) map.get("TitlePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("TitlePrimaryKey"));
+            titleRepository.delete((java.lang.String) map.get("TitlePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateTitle(EntityTestCriteria contraints, Title title) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            title.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            title.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            title.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            titleRepository.save(title);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "titles", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "titles", "poUdQNb0rTkEcFwauaXpVn7RZCuvH8n6a8HhFdlNbwL22tD6pIDcLPgvtaSR9jXZcIlvNSK8BgxPHqxocH4YWEmFg5VbnwtF4jIcAmg91ro2uaHHPvvUBIxdqmiww9thcIi1UHx6WCBP7YNDabOQ0PfzzCufdYQ9RmjfkUIyCSnpNuR6WtwAayTgJBdmzupu0TzYgV3hwqHp8oD5JoAqpzKk5urYpdgmlQifKHwZ6ZRdhiogqx0xagiteyfI0PlRf"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

@@ -33,7 +33,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_Timezone_M")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "Timezone", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "Timezone", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "Timezone.DefaultFinders", query = "select e from Timezone e where e.systemInfo.activeStatus=1 and e.utcdifference BETWEEN :minutcdifference AND :maxutcdifference"), @javax.persistence.NamedQuery(name = "Timezone.findById", query = "select e from Timezone e where e.systemInfo.activeStatus=1 and e.timeZoneId =:timeZoneId") })
 public class Timezone implements Serializable, CommonEntityInterface, TimeZoneInterface, Comparator<Timezone> {
 

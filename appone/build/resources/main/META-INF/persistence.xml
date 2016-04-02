@@ -63,6 +63,7 @@
     <jar-file>lib/athena-report-1.0.jar</jar-file>
     <jar-file>lib/athena-query-1.0.jar</jar-file>
     <jar-file>lib/spartan-shield-1.0.jar</jar-file>
+<<<<<<< HEAD
     <jar-file>lib/athena-config-1.0.jar</jar-file>
     <jar-file>lib/athena-framework-1.0.jar</jar-file>
     <jar-file>lib/spartan-sprinkler-1.0.jar</jar-file>
@@ -83,6 +84,8 @@
     <jar-file>lib/athena-report-1.0.jar</jar-file>
     <jar-file>lib/athena-query-1.0.jar</jar-file>
     <jar-file>lib/spartan-shield-1.0.jar</jar-file>
+=======
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
   </persistence-unit>
 
 </persistence>

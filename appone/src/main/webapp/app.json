@@ -304,5 +304,9 @@
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
+<<<<<<< HEAD
     "id": "a1504bb7-a7c4-4e38-8697-8daea431679f"
+=======
+    "id": "c81803c4-048e-4625-99f6-860a0934940f"
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 }

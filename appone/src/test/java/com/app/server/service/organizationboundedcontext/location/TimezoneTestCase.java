@@ -103,6 +103,7 @@ public class TimezoneTestCase extends EntityTestCriteria {
 
     private Timezone createTimezone(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         Timezone timezone = new Timezone();
+<<<<<<< HEAD
         timezone.setCountry("9AA7WpRcZVG5ipbNHCJcsdecqUHDU8PVJ7amATdKdheEX387t7");
         timezone.setCities("yjPLOmg4vsmEReAci0iRJz9RUnqua4Y8cK5COOsIll6cUsky3e");
         timezone.setGmtLabel("OpExnnHII4ZQ5ZmnEqzlLKHF8wJtIxBJg3sUKOSM5jAIJBy139");
@@ -191,6 +192,96 @@ public class TimezoneTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "timeZoneLabel", "I5Ivv5CfX46XBGFDZ3BtCYgOQYsviUIdNOHXLUv2fqgZPhDAMY1lKzV12KcsKGtpWEnBIlQOtlEv5HT126CPKr3oOlNli9yMt9cstEtj8LgMF4LXniy95dxuJC6mjzvYAmO1JHbh7C5La9FYwc7Q1aVPSTEVbTdP7i4FxAcLgm4vICMouziHIDhFl3zccf8XhfH0KXS9kNKYxJuxfqKQVrYe91YZv3j1UETy7c28nywMcRySOOGcYumWutVaNamxp"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "country", "qCpNODk9JDwBz91DHwq0ZJa0K13Dv1LMM5FlJbzg2yFjnPoN6YGU4Y0HEb2mOHM6tx4kl6QOdEoTeq8gFnTgFONbKpp4ocsnMTc1HfHNntYOs0p3amUTsjngqxQBaRjQxDQrisadOMbOdgPKh2mT63I2YsLwgVvKjDqiaNBK1IahENpbwpBprVdbFRNGvrjTugCX0d2k5DM07RXO4XkOFf0R74UWLIX78NtgQLCxHTzStYrTX9u7uAZ25WamXz3en"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "cities", "HsIuv6z2vrC7CIaWyrxM8ksf4kBPscQAgENY5leomVf0OypkYilMv8RtwDwdtIhSk4A34x6ubLZz9ZiYj6wN6LUu4Yiaw9HqMSVnMUwiyJQ2TsDBgxuZkXxGz3PEpqbPVmSmlKmYn5D2ErORUsMZnnpECuR56tG21zK6w6rKzLzt1qf1PEUOnFwodnPNZ2K8gayZkDw7ap1RNcDamHjydnZVfJMIlCkJr6dUTEl7tBzW2xeVY0fKrsmu3Y9MIfTGP"));
+=======
+        timezone.setCountry("MdZW5GWkEkzrDOI97c9CUQVLicqxov93tis3dzu3JvG4lgV4vx");
+        timezone.setCities("WmsetiuQFRZLQ1HxEK8hGbeTmVjjJybBIRkLDco8TBX4bhtaCv");
+        timezone.setGmtLabel("AbPxbP4Wk7u1LyqfGfytH5oV66S7iev0NTl5w6jzdEjugW8ivu");
+        timezone.setUtcdifference(8);
+        timezone.setTimeZoneLabel("4aGxv1fRFUs2c1syVme9E6QhzCnRBJlETkiJF1oS7QiiGHOE7E");
+        timezone.setEntityValidator(entityValidator);
+        return timezone;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            Timezone timezone = createTimezone(true);
+            timezone.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            timezone.isValid();
+            timezoneRepository.save(timezone);
+            map.put("TimezonePrimaryKey", timezone._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("TimezonePrimaryKey"));
+            Timezone timezone = timezoneRepository.findById((java.lang.String) map.get("TimezonePrimaryKey"));
+            timezone.setCountry("6RVZhAmXwCbsSIC33g6DLm8Ot7EEUXmT4c55pDpU8ytJxc1GlQ");
+            timezone.setCities("mQHT1fB0DOZWO5p0FGOJAkZ1bwzjzGLkuckt3bo9y7ICvuFYOo");
+            timezone.setGmtLabel("oyba5QDVIzoIUrBdHUeZdXC7NCvb6SYJmCkNbR2wSUQVe7WhfU");
+            timezone.setUtcdifference(5);
+            timezone.setTimeZoneLabel("TuRZhfxf4W6sPzBkqGs3aQY5vmhFv74U7z6g8TQauYD4mFhqfC");
+            timezone.setVersionId(1);
+            timezone.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            timezoneRepository.update(timezone);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("TimezonePrimaryKey"));
+            timezoneRepository.findById((java.lang.String) map.get("TimezonePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("TimezonePrimaryKey"));
+            timezoneRepository.delete((java.lang.String) map.get("TimezonePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateTimezone(EntityTestCriteria contraints, Timezone timezone) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            timezone.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            timezone.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            timezone.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            timezoneRepository.save(timezone);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "utcdifference", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "utcdifference", 21));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "gmtLabel", "2yVbMExpjMXBSEA8lMmalhLnUWTQPkQlxso2oXOQD8Y0mLL4trarBnDrPnl7aY2n9dPsH9lVvjrTUIhaC9d4jgIUegm6Pwh2IASHBeMURKuxf5oTi5osIDd0zsqgee82SrNaOhCPff2oCqCz8Yl2ULcYsYCVaXD5lKS2rWAdvdwArSwWgtaSsoh8X3jGctS3w6CWljTynlkStLHUsXDPICsa0YtyJQSmOvM4d020Me8U6FBekSiw90IhArgC8SjJE"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "timeZoneLabel", "vkdKXaYfvvAUOOkOXzZbTe18LQ1HVNR14KYe1RcgPgiuLhu6xXzFlsAihtzXKvBBXQ1o27WYVxSkW0pBPyNUTFfpqJeWBMtIsIf4oSFI3SKWGrvtGxP9LDEF9DF5YClygWtdjg3wSomFONUHh3q90SdWArtfJRFiopHm33appSK6nfVLekB5UPAfu2vHu80EbzyWRHpXxiue0BcbuBaCCZSWxNgFMRVrXrvPZliy1VKM3znMmrqzrupiXWiOOGHTh"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "country", "W9sbDz43oubJezMDEsJHuN3wOxRqhgDho0QxbrZQ36CaRau6AvHU8N3gGmJZkkzfgImb2eXlC6N6o4pNYfE3A9QqGq3ox1lR3LnoC6y1Wwtt71BFNk0k4hsYciYbObXtVI2UlMqDM9821YWxFCqINgjJ5PgvPV9UStTu9qfnWr79wGYyEWyTMsJeAjftswlwDeaxUsLEVoK1sQHdJUbNzNbNlNHZ7m9IKejog0EtaXe7mix5zeTAKwfbU2mpIJdbA"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "cities", "iwM2H07VZ9e75yqORDXAL6wIEZ7az3aUxsfavMx6kyLfMmj1CtvXkMWumNnlK3kEsGMAEaZmdjM0v5vRkZmL5NXTXJgbBb5dxNDJ3BoSzRc2CY0oiu0XRUF5dSMVctoBYJQfg61iHx3utuvjauf4PzZcZH5Ml9O5OxAKJ3LNOSpTK1iANf5kgPB5Ik18tCSUSrtrTb58I1txgkKNBDr9QbQl2qntOqJQR2kraFZhtxdostJc9MZcipDUoKfxPgFHM"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

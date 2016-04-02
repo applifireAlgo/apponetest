@@ -32,7 +32,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_UserAccessDomain_M")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "UserAccessDomain", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "UserAccessDomain", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "UserAccessDomain.findById", query = "select e from UserAccessDomain e where e.systemInfo.activeStatus=1 and e.userAccessDomainId =:userAccessDomainId") })
 public class UserAccessDomain implements Serializable, CommonEntityInterface, Comparator<UserAccessDomain> {
 

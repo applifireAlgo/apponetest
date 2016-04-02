@@ -30,7 +30,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_Title_M")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "Title", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "Title", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "Title.findById", query = "select e from Title e where e.systemInfo.activeStatus=1 and e.titleId =:titleId") })
 public class Title implements Serializable, CommonEntityInterface, Comparator<Title> {
 

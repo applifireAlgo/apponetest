@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="com.app.server.service.organizationboundedcontext.location.CountryTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T06:44:15" hostname="cca3c83ae841" time="0.245">
   <properties/>
   <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.location.CountryTestCase" time="0.046"/>
@@ -22,6 +23,31 @@ Setting logged in user info for UPDATE
 	bind => [5A06D4CC-2CB0-446A-8EC0-2D813EB9E983]
 [EL Fine]: sql: 2016-04-02 06:44:15.665--ClientSession(1633810496)--Connection(432729881)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Country_M WHERE ((countryId = ?) AND (versionId = ?))
 	bind => [5A06D4CC-2CB0-446A-8EC0-2D813EB9E983, 2]
+=======
+<testsuite name="com.app.server.service.organizationboundedcontext.location.CountryTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-01T14:54:19" hostname="be9119dbb530" time="3.453">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.location.CountryTestCase" time="0.042"/>
+  <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.location.CountryTestCase" time="0.024"/>
+  <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.location.CountryTestCase" time="0.007"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.location.CountryTestCase" time="0.296"/>
+  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.location.CountryTestCase" time="3.082"/>
+  <system-out><![CDATA[Setting logged in user info for ADD
+[EL Fine]: sql: 2016-04-01 14:54:19.785--ClientSession(1472009155)--Connection(46030963)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Country_M (countryId, capital, capitalLatitude, capitalLongitude, countryCode1, countryCode2, countryFlag, countryName, currencyCode, currencyName, currencySymbol, isoNumeric, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [7495D9BE-E458-4013-8A42-A1D72F8E2654, NwawlWu88aMwe9YUcEzTmx1JwiyxaaNH, 5, 6, Ja9, opy, Cyx9qbLbPIZADLwRkhMeWpolF61uNuEfb9OXJe1um7KfYa8508, I200hbor6jhoTGVuW9R9grLcLU9q9FSiKvrxT7sIp3CLnOZAeR, Wrr, OCRmHwv1wRbAF7agLkhyHKe7eT8sn7puhJEQI9spoBYFxY7tK2, d4uh3qabOdiLNx6uPFZWGtota7a4HxXl, 415, 1, AAAAA, 2016-04-01 14:54:19.776, null, 2016-04-01 14:54:19.776, 1, 51000]
+[EL Fine]: sql: 2016-04-01 14:54:19.796--ClientSession(1576922746)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT countryId, capital, capitalLatitude, capitalLongitude, countryCode1, countryCode2, countryFlag, countryName, currencyCode, currencyName, currencySymbol, isoNumeric, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Country_M WHERE ((activeStatus = ?) AND (countryId = ?))
+	bind => [1, 7495D9BE-E458-4013-8A42-A1D72F8E2654]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-04-01 14:54:19.808--ClientSession(1927594840)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT countryId, capital, capitalLatitude, capitalLongitude, countryCode1, countryCode2, countryFlag, countryName, currencyCode, currencyName, currencySymbol, isoNumeric, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Country_M WHERE (countryId = ?)
+	bind => [7495D9BE-E458-4013-8A42-A1D72F8E2654]
+[EL Fine]: sql: 2016-04-01 14:54:19.81--ClientSession(1927594840)--Connection(46030963)--Thread(Thread[Test worker,5,main])--UPDATE ast_Country_M SET capital = ?, capitalLongitude = ?, countryCode1 = ?, countryCode2 = ?, countryFlag = ?, countryName = ?, currencyCode = ?, currencyName = ?, currencySymbol = ?, isoNumeric = ?, updatedBy = ?, versionId = ? WHERE ((countryId = ?) AND (versionId = ?))
+	bind => [MvF09xlm6mlFellDgBZ3SANjmslPO8G4, 9, ASa, YO9, PZutEVdkDUEjs86xKY1UnrS0DuVl1GGk4veYybGuA3sZeS5KLA, FtlTbJ9eR7IIKmslW5F74ZRYq6Kf4x9mpYNlpoVkAlUtm2tcnF, cW3, 3MPz3FRqmvxlGrZHmsD2l0Yna5yJlxUEGVVux06eiA9tbnxGAL, GaShGOCc81sZFseKZGlGM253NXiFvpLX, 474, AAAAA, 2, 7495D9BE-E458-4013-8A42-A1D72F8E2654, 1]
+[EL Fine]: sql: 2016-04-01 14:54:19.82--ClientSession(1824910043)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT countryId, capital, capitalLatitude, capitalLongitude, countryCode1, countryCode2, countryFlag, countryName, currencyCode, currencyName, currencySymbol, isoNumeric, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Country_M WHERE ((activeStatus = ?) AND (countryId = ?))
+	bind => [1, 7495D9BE-E458-4013-8A42-A1D72F8E2654]
+[EL Fine]: sql: 2016-04-01 14:54:20.125--ClientSession(1908961258)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT countryId, capital, capitalLatitude, capitalLongitude, countryCode1, countryCode2, countryFlag, countryName, currencyCode, currencyName, currencySymbol, isoNumeric, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Country_M WHERE (countryId = ?)
+	bind => [7495D9BE-E458-4013-8A42-A1D72F8E2654]
+[EL Fine]: sql: 2016-04-01 14:54:20.127--ClientSession(1908961258)--Connection(46030963)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Country_M WHERE ((countryId = ?) AND (versionId = ?))
+	bind => [7495D9BE-E458-4013-8A42-A1D72F8E2654, 2]
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.organizationboundedcontext.location.Country.countryName may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.organizationboundedcontext.location.Country.countryName may not be null

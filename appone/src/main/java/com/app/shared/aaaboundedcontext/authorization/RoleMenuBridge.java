@@ -34,7 +34,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_RoleMenuBridge_TP")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "4", comments = "RoleMenuBridge", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "3", comments = "RoleMenuBridge", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "RoleMenuBridge.findByMenuId", query = "select e from RoleMenuBridge e where e.systemInfo.activeStatus=1 and e.menuId=:menuId"), @javax.persistence.NamedQuery(name = "RoleMenuBridge.findByRoleId", query = "select e from RoleMenuBridge e where e.systemInfo.activeStatus=1 and e.roles.roleId=:roleId"), @javax.persistence.NamedQuery(name = "RoleMenuBridge.findById", query = "select e from RoleMenuBridge e where e.systemInfo.activeStatus=1 and e.roleMenuMapId =:roleMenuMapId") })
 public class RoleMenuBridge implements Serializable, CommonEntityInterface, Comparator<RoleMenuBridge> {
 

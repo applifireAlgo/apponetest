@@ -39,7 +39,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_Login_T")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "Login", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "Login", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedNativeQuery(name = "complexQuery", query = "SELECT login.appCreatorId FROM ast_Login_T AS login,`ast_CoreContacts_T` AS corecontact,`ast_User_T` AS userinfo, `ast_UserData_TP` AS userdata WHERE loginId=? AND login.`contactId`=corecontact.`contactId` AND login.`userId`=userinfo.`userId` AND userinfo.`userId`=userdata.userId")
 @NamedQueries({ @javax.persistence.NamedQuery(name = "Login.DefaultFinders", query = "select e from Login e where e.systemInfo.activeStatus=1 and e.serverAuthImage LIKE :serverAuthImage"), @javax.persistence.NamedQuery(name = "Login.findByContactId", query = "select e from Login e where e.systemInfo.activeStatus=1 and e.coreContacts.contactId=:contactId"), @javax.persistence.NamedQuery(name = "Login.findByUserId", query = "select e from Login e where e.systemInfo.activeStatus=1 and e.user.userId=:userId"), @javax.persistence.NamedQuery(name = "Login.findById", query = "select e from Login e where e.systemInfo.activeStatus=1 and e.loginPk =:loginPk"), @javax.persistence.NamedQuery(name = "FindUnMappedUser", query = "SELECT u FROM Login u WHERE u.systemInfo.activeStatus=1 AND u.user.userId NOT IN (SELECT ub.userId FROM UserRoleBridge ub)"), @javax.persistence.NamedQuery(name = "FindMappedUser", query = "SELECT u FROM Login u WHERE u.systemInfo.activeStatus=1 AND u.user.userId IN (SELECT ub.userId FROM UserRoleBridge ub)") })
 public class Login implements Serializable, CommonEntityInterface, UserAuthentication, Comparator<Login> {

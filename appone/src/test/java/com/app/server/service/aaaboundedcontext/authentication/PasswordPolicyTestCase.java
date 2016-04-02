@@ -103,6 +103,7 @@ public class PasswordPolicyTestCase extends EntityTestCriteria {
 
     private PasswordPolicy createPasswordPolicy(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         PasswordPolicy passwordpolicy = new PasswordPolicy();
+<<<<<<< HEAD
         passwordpolicy.setPolicyName("oqOQQIAMej41vgYXQOw9uttso5Dt7aM119Ew6WlpIL9JSBRbUd");
         passwordpolicy.setMinCapitalLetters(8);
         passwordpolicy.setMinNumericValues(4);
@@ -204,6 +205,109 @@ public class PasswordPolicyTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "minNumericValues", 12));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 10, "minSpecialLetters", 18));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 11, "allowedSpecialLetters", "Z1ZksQOiuEOqKV9NsqY5DdL1rzbasvkGXYddgWP84nIch2uE3xntOx9UlpWS4LKEmYHqdHowPiVQG49djKnqVjdxv3Lv1Jgb9Wk3TgQpAYtsNYUlyUrSCbK7aqPxWK6ZLuXr3P3V2kqEbY2ETnmRNB2Jej0MlI16wiaAhyEFpdDksYXHM7v5sRErzYdvszM3oiGGRMV6W6oKKeAxLhTkI9lpGORNQe78CW57aZi9ET35zKDo3qNSTCZrGHfi6YD2N"));
+=======
+        passwordpolicy.setPolicyName("ZgwzeiM1voNzZ7LZfp5ciT6zdQV9N3FTIHDMS1vgJkJdew9iWY");
+        passwordpolicy.setMinCapitalLetters(11);
+        passwordpolicy.setMinNumericValues(5);
+        passwordpolicy.setMaxPwdLength(15);
+        passwordpolicy.setPolicyDescription("Q65wHpbKshIqccM61MI0PlwbRhTTx58HGEn9YDI9AG1U9MOn8w");
+        passwordpolicy.setMinPwdLength(9);
+        passwordpolicy.setMinSmallLetters(10);
+        passwordpolicy.setAllowedSpecialLetters("WVdKTGG9QI0Agkl5tbMj78vRxc7nKv51ZIO8qucFJ16bFhOKfm");
+        passwordpolicy.setMinSpecialLetters(8);
+        passwordpolicy.setEntityValidator(entityValidator);
+        return passwordpolicy;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            PasswordPolicy passwordpolicy = createPasswordPolicy(true);
+            passwordpolicy.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            passwordpolicy.isValid();
+            passwordpolicyRepository.save(passwordpolicy);
+            map.put("PasswordPolicyPrimaryKey", passwordpolicy._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("PasswordPolicyPrimaryKey"));
+            PasswordPolicy passwordpolicy = passwordpolicyRepository.findById((java.lang.String) map.get("PasswordPolicyPrimaryKey"));
+            passwordpolicy.setPolicyName("KokoCEFS5jzoiNSvtBLSOMgFMYkq58qtlZzrRKFbif548z5G8m");
+            passwordpolicy.setMinCapitalLetters(7);
+            passwordpolicy.setMinNumericValues(8);
+            passwordpolicy.setMaxPwdLength(29);
+            passwordpolicy.setPolicyDescription("fgkZxRukXFtQx1mGJJDuUrHZKUMsnNqt4cE2twLl7j3KO3QSd0");
+            passwordpolicy.setMinPwdLength(5);
+            passwordpolicy.setMinSmallLetters(3);
+            passwordpolicy.setAllowedSpecialLetters("srcTFJhQUvokJjb4TrxTpx6jJBHsoWRcRISU5nS6qVsZXzYXrm");
+            passwordpolicy.setMinSpecialLetters(3);
+            passwordpolicy.setVersionId(1);
+            passwordpolicy.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            passwordpolicyRepository.update(passwordpolicy);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("PasswordPolicyPrimaryKey"));
+            passwordpolicyRepository.findById((java.lang.String) map.get("PasswordPolicyPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("PasswordPolicyPrimaryKey"));
+            passwordpolicyRepository.delete((java.lang.String) map.get("PasswordPolicyPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validatePasswordPolicy(EntityTestCriteria contraints, PasswordPolicy passwordpolicy) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            passwordpolicy.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            passwordpolicy.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            passwordpolicy.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            passwordpolicyRepository.save(passwordpolicy);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "policyName", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "policyName", "3KJmEGfXvWBGB0EkhGyxAh4ThiTBhklaVaGisYXaPakYAmZVjIhNvqixZxfVD0korQZaYHN0dRpCikmYG7bj3keS8Cvwt16qBAnMlfNvRzPke1ftvcSuVbmjxT2tHLnqPLjW0ftGCiGX6NRIbLfsQ0krFD9wDmT4csSu7C7RTtRxqFUVy7AJQ9uLcOnC02mPz1FsezzFHoAWlX4ijnuy9NNRqcRuGCyoMHRIhUk9E1AKkn5fkRnpWO42nABQHupFL"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "policyDescription", "VzbZ1ZiScaWzYyFEKGnHyFF3TVV06aiOdslNQycCsDwWJP1kZQM16hR6yU9aNKAzaOQvg8kPc5hGz6t8cksmgOpxFqVf4r3K30ej3xYs1q2BDZXJALh8oAiLHNU3r2mkKS9VHHqJ9xOziwo5AoqUQW2YjkN5LOITsL6MLlwElDIBjq2oAYZIlesaX5CjjFzk8XB9zhrUGfSMo5MrfqfFzJx5o723cIocAZSkFe7fb4Jm3QpFsLSQWDLXLH5PCZJV3"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "maxPwdLength", 54));
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 5, "minPwdLength", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "minPwdLength", 21));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "minCapitalLetters", 15));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "minSmallLetters", 14));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "minNumericValues", 13));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 10, "minSpecialLetters", 15));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 11, "allowedSpecialLetters", "jLtNCUKKi7bvgTvU2OVzG6MvAnBHe8Kg6Y909XuZde437V7yEoeQ2p7kycIhkbH6AxxX7rRUWgLva7XaNqtELiaCVorchIT1QR3jWAGHhkaWELS6CetTzAGsku7Ja6l9v050uM3hr2IhL4pLrsByckKKUMLl1FwkIKVEexFT0JCj7V7IzG5WXy8e8gheScrlqxOZ2wfnBsEIa0C0Aeby4XZWnqTIxykIPlzytcNs0u60QiE7t6Xca1NxPyGpswrdz"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

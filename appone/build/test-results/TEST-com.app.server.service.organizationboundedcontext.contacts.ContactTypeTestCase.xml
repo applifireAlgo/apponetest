@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T06:44:14" hostname="cca3c83ae841" time="0.11">
   <properties/>
   <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" time="0.033"/>
@@ -22,6 +23,31 @@ Setting logged in user info for UPDATE
 	bind => [1555C8FC-84DD-46BB-AC92-BDA7A18C334B]
 [EL Fine]: sql: 2016-04-02 06:44:14.14--ClientSession(64062554)--Connection(432729881)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_ContactType_M WHERE ((contactTypeId = ?) AND (versionId = ?))
 	bind => [1555C8FC-84DD-46BB-AC92-BDA7A18C334B, 2]
+=======
+<testsuite name="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-01T14:54:18" hostname="be9119dbb530" time="0.095">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" time="0.026"/>
+  <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" time="0.017"/>
+  <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" time="0.005"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" time="0.03"/>
+  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.contacts.ContactTypeTestCase" time="0.015"/>
+  <system-out><![CDATA[Setting logged in user info for ADD
+[EL Fine]: sql: 2016-04-01 14:54:18.612--ClientSession(702440092)--Connection(46030963)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_ContactType_M (contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [CC547444-EB46-4020-B75D-6F80207DA0E5, 0lE3B4NiGc2hukb0passd1Gt3W8JpHgc1b8wEbu6pQdLZSebAg, TOcfM7T7AO40OWqnAOshrQQSsvz7M3FtBBO5tErK2l96GWIxh6, QL512pty9qMXhYfaelQ115vyGWXrLDfMIxsTui8SKLTm0Ojo9S, 1, AAAAA, 2016-04-01 14:54:18.608, null, 2016-04-01 14:54:18.608, 1, 51000]
+[EL Fine]: sql: 2016-04-01 14:54:18.623--ClientSession(208223039)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE ((activeStatus = ?) AND (contactTypeId = ?))
+	bind => [1, CC547444-EB46-4020-B75D-6F80207DA0E5]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-04-01 14:54:18.629--ClientSession(1781712697)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE (contactTypeId = ?)
+	bind => [CC547444-EB46-4020-B75D-6F80207DA0E5]
+[EL Fine]: sql: 2016-04-01 14:54:18.631--ClientSession(1781712697)--Connection(46030963)--Thread(Thread[Test worker,5,main])--UPDATE ast_ContactType_M SET contactType = ?, contactTypeDesc = ?, contactTypeIcon = ?, updatedBy = ?, versionId = ? WHERE ((contactTypeId = ?) AND (versionId = ?))
+	bind => [2n3CigjdPGfDEF03OMcadypXaGH8dBvQ9Qzw7nWrz2UVVOiSVv, 2PoiSWDZswIMDqJ96UQzcpksHaC8BUMWlsjWV4jn0k5a4kUJN2, mSUU1XZ451dfYgu5MhVyFY4gpxOuuEkVIiXqwQOwDPahneabBz, AAAAA, 2, CC547444-EB46-4020-B75D-6F80207DA0E5, 1]
+[EL Fine]: sql: 2016-04-01 14:54:18.638--ClientSession(249691581)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE ((activeStatus = ?) AND (contactTypeId = ?))
+	bind => [1, CC547444-EB46-4020-B75D-6F80207DA0E5]
+[EL Fine]: sql: 2016-04-01 14:54:18.677--ClientSession(2106855591)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT contactTypeId, contactType, contactTypeDesc, contactTypeIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_ContactType_M WHERE (contactTypeId = ?)
+	bind => [CC547444-EB46-4020-B75D-6F80207DA0E5]
+[EL Fine]: sql: 2016-04-01 14:54:18.679--ClientSession(2106855591)--Connection(46030963)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_ContactType_M WHERE ((contactTypeId = ?) AND (versionId = ?))
+	bind => [CC547444-EB46-4020-B75D-6F80207DA0E5, 2]
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.organizationboundedcontext.contacts.ContactType.contactType may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.organizationboundedcontext.contacts.ContactType.contactType may not be null

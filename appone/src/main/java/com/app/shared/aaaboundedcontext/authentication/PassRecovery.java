@@ -35,7 +35,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_PassRecovery_TP")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "4", comments = "PassRecovery", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "3", comments = "PassRecovery", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "PassRecovery.findByQuestionId", query = "select e from PassRecovery e where e.systemInfo.activeStatus=1 and e.questionId=:questionId"), @javax.persistence.NamedQuery(name = "PassRecovery.findByUserId", query = "select e from PassRecovery e where e.systemInfo.activeStatus=1 and e.user.userId=:userId"), @javax.persistence.NamedQuery(name = "PassRecovery.findById", query = "select e from PassRecovery e where e.systemInfo.activeStatus=1 and e.passRecoveryId =:passRecoveryId") })
 public class PassRecovery implements Serializable, CommonEntityInterface, PassRecoveryInterface, Comparator<PassRecovery> {
 

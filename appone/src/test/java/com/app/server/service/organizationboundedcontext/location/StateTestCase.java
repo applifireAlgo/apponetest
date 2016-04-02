@@ -105,6 +105,7 @@ public class StateTestCase extends EntityTestCriteria {
 
     private State createState(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         Country country = new Country();
+<<<<<<< HEAD
         country.setCountryFlag("LgpwXy8OfLm6F3fzb4AnWG2eGXuM1Wht2GZ1VxQgKSEFXr0pha");
         country.setCurrencyCode("jFa");
         country.setIsoNumeric(504);
@@ -241,6 +242,144 @@ public class StateTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "stateFlag", "RxwwXnWujFZdRPVuorBy59G9aindHx7D68F9jAH60LYSORA4orTTZokpB8Pjav8jrgNn35w0ifkRHPlyW4V1ZMREMKC1jIT3fFr77eNcnIBF6VMTbqCzE7iIu0hSbH6LO"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "stateCapital", "G0QI7tdQNSSYTNF26dxGZxdopNphL91z4KNAteLakWXHaB97pmg4TsjOcSLbWvyt9QXbCeAtsWC9Yeb954uk6wE79LSS4s2G3uhfsEsTG9oQv8VT3Qg38ByAeZQgWmX5R"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 10, "stateCapitalLatitude", 12));
+=======
+        country.setCountryFlag("RBNpAfG9QIRQnTYeNZxq8YW9gmA0jEkiiMpNCVeruPI9KZo3Tn");
+        country.setCurrencyCode("Ncf");
+        country.setIsoNumeric(157);
+        country.setCapitalLongitude(4);
+        country.setCountryCode2("26R");
+        country.setCountryName("27ZXvxyCSg9H1gVnOpQM0q8YZiwE8jz0Ne4HneZrxo338uJzTo");
+        country.setCurrencySymbol("2LutYjQoNqlGQ1zlkZXmgIFo5kSCf8vA");
+        country.setCountryCode1("S54");
+        country.setCapital("IRMnSHH00HEtAvhImJEB8m0zrcXZ9uOX");
+        country.setCurrencyName("AlldwWazr8sCv9NmYM1q6PmUMSgXXFOfg8wPIlJdGkglBpFFxQ");
+        country.setCapitalLatitude(7);
+        Country CountryTest = new Country();
+        if (isSave) {
+            CountryTest = countryRepository.save(country);
+            map.put("CountryPrimaryKey", country._getPrimarykey());
+        }
+        State state = new State();
+        state.setStateFlag("uQ1kok6hYV2hHvN9qho3OHTLiaLei7qkFPi2v0Rys15IckUjmi");
+        state.setCountryId((java.lang.String) CountryTest._getPrimarykey());
+        state.setStateCapital("LOcWcmiJ8SY7mgJivUNWgEr2FtsAIBG6NQTfe5SE4Ql4su2XyJ");
+        state.setStateCode(2);
+        state.setStateName("zRnLSFJtnSajkqOSoFJUf82q6Bk9BHDPA1aYTra0fBfVE5LmxQ");
+        state.setStateDescription("PvD5RyrfQSBD4leeiSweYFtGAGuUD1f4IOxr8cNspTtCvWBzR7");
+        state.setStateCapitalLongitude(1);
+        state.setStateCapitalLatitude(8);
+        state.setStateCodeChar3("OFcB61V4rzIYv4C7aHqtEMMuCTeNHb8J");
+        state.setStateCodeChar2("15I2CMO7126QhDVO44r0xOIRn8m2wB7y");
+        state.setEntityValidator(entityValidator);
+        return state;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            State state = createState(true);
+            state.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            state.isValid();
+            stateRepository.save(state);
+            map.put("StatePrimaryKey", state._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Autowired
+    private CountryRepository<Country> countryRepository;
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("StatePrimaryKey"));
+            State state = stateRepository.findById((java.lang.String) map.get("StatePrimaryKey"));
+            state.setStateFlag("UiqjUmSHkwQCOxeJqn2MxQFDOVpSPsyIikpuEO510uuBXIa0Yi");
+            state.setStateCapital("gyQ1tY8EhPC7uRew8AEwpNxeieuor1cHNREnmsKELO7Y7Nol4R");
+            state.setStateCode(2);
+            state.setStateName("nkN0AOkUnkTuUBgmeoxNhAGBUtxi7Sjypf1WXdyo1DEDS953Kv");
+            state.setVersionId(1);
+            state.setStateDescription("BnO7CVFEsa7TK6P3ZlPCOxtZua7TNq0brdxlufjdVTeGIKCU4I");
+            state.setStateCapitalLongitude(5);
+            state.setStateCapitalLatitude(3);
+            state.setStateCodeChar3("Xx4avcqDbykcWqBlBM5ymQQ72ep9QrSz");
+            state.setStateCodeChar2("Y9XtULSSfpskIILYHe8De5z7UCSKzxXr");
+            state.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            stateRepository.update(state);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3findBycountryId() {
+        try {
+            java.util.List<State> listofcountryId = stateRepository.findByCountryId((java.lang.String) map.get("CountryPrimaryKey"));
+            if (listofcountryId.size() == 0) {
+                org.junit.Assert.fail("Query did not return any records.");
+            }
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("StatePrimaryKey"));
+            stateRepository.findById((java.lang.String) map.get("StatePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("StatePrimaryKey"));
+            stateRepository.delete((java.lang.String) map.get("StatePrimaryKey")); /* Deleting refrenced data */
+            countryRepository.delete((java.lang.String) map.get("CountryPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateState(EntityTestCriteria contraints, State state) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            state.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            state.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            state.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            stateRepository.save(state);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "stateName", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "stateName", "rxc9ML2jsz3XSgF3YHQ9bPnEIYyusWkxA5gOzWZrHLApOQPuJV5brEQmwqOUZqp9eOoFkwzAxEkddI2IkzR4T2iu7USR4YucSGs2Bj5bm7oWdnUiq47bXSF4oUqKnOBjyhO0eu1GjRslO2zahGXDEoIKFG3C4v2iRdCjRgjsjQkKDdckrz5rHuEmcd7IN4i3Pq4pGPbvHQHof4OqaixXDSKnqQ4DVuMCPeshs5Bno5Jvqo1kgEQ54qilRFixI8wDL"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "stateCode", 4));
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 4, "stateCodeChar2", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 5, "stateCodeChar2", "o0aUV8GYqI6VXQU4KhYzgGzvAjByrKtXD"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 6, "stateCodeChar3", "FpwuB4MUsaYL0QUadSsd4XZ3pLbw6Z8vl"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 7, "stateDescription", "9vQUzp2jheTiBtqc6JlHFd0E8zeiV4waJ1ro3QT5Z16sIENF5miMV2vLkN6TwkEJwPHCy20C78Su7hwjzO2cGQLRKvsVhAbNOj5NoYMyD4zQ1LZa7NuNqaxxXvF0gZtJxYkj6X2PPXwhEYC3xCBBwZNY4jn5aenbMv84pLs1o50JlL2BkJvqUnLiIPe8bRAk3ePsJ616M7R0ucgKxMvMc3OF493oTVwl7ROIN6YOGAzx4x6Jd2BqXWnTLOT3PzVmA"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 8, "stateFlag", "tthyAfuucPItTNBjux7TZ7y6s6dbwcMVcEyqSshHC9hpGEaVAwYbZy3Izyt2HuiIiePUBOb1gxQEcJbXj8N1jOJgPSHWQqbEb4HYeYndFEqSOFD4KUIgYSE32EPlQOPAP"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 9, "stateCapital", "ir8SjbOF2YpjaS4njZEeH79pePRPwUxO8TiqvqxTnVTvQ19NfZ94hGvWnzqvztc3tn290dzmr5wupTo6UTXl0Erpo2veOgYQq3YdlfJecJ6Q785Vsg67PU6UrbMin5yj1"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 10, "stateCapitalLatitude", 15));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 11, "stateCapitalLongitude", 17));
         return entityContraints;
     }

@@ -103,6 +103,7 @@ public class GenderTestCase extends EntityTestCriteria {
 
     private Gender createGender(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         Gender gender = new Gender();
+<<<<<<< HEAD
         gender.setGender("7wcJ6SRhilLJIQIhhkcWi6xc7DmD7pUoZK8rCLdqWMvW9riZrt");
         gender.setEntityValidator(entityValidator);
         return gender;
@@ -179,6 +180,84 @@ public class GenderTestCase extends EntityTestCriteria {
         List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
         entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "gender", null));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "gender", "b5l0d4YPdoktiB73at7qrF1SpRSrOOP3J5ElaFScuJmeBxMdU2RWrNfkl6sY6Lgjlh10NwPlXLwPXpTMzJkzVZ5C0tW01rgznUR0Ja0ik3oh2syvQjpJk1kbpvVoGqNpMu5OALxkWQOuIALwuIlviGAaV1I7rep027tHzHcCexQz2GiKVynXXqFVUQNSf0NGhOmg8cH6LEgFKkiVs6HvrjC6RqHOnrrwaZByX6dMSpIA0gUMupGC0k511jH2b7j0z"));
+=======
+        gender.setGender("RWt5OHmG15hSq0XV2mutVX9CHR1d0w9aufHJfrgrBA495Opd8u");
+        gender.setEntityValidator(entityValidator);
+        return gender;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            Gender gender = createGender(true);
+            gender.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            gender.isValid();
+            genderRepository.save(gender);
+            map.put("GenderPrimaryKey", gender._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("GenderPrimaryKey"));
+            Gender gender = genderRepository.findById((java.lang.String) map.get("GenderPrimaryKey"));
+            gender.setGender("LAMr0jTrSjQf7vLDKtML4jfYRgHei1MgsOmVCyuFdfLrBgkYr7");
+            gender.setVersionId(1);
+            gender.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            genderRepository.update(gender);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("GenderPrimaryKey"));
+            genderRepository.findById((java.lang.String) map.get("GenderPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("GenderPrimaryKey"));
+            genderRepository.delete((java.lang.String) map.get("GenderPrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateGender(EntityTestCriteria contraints, Gender gender) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            gender.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            gender.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            gender.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            genderRepository.save(gender);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "gender", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "gender", "Ct5NzHpQgRR2xUu8W3vwCBc2BG0NoJTPItDIGfMVjy7vmK30R4QKny726wL5gh6R3KmZnrPAdVSmSPgc4S3KM3RDPIGosIxCL3jXYvE2Ed9DxJdj94jhFm2rCcAlyqp7zcwxdXqvlvKTW7tsB7TmaFvBHdP3fLwrJ0gbHq5y9j4GfzeBJRi9SwRuxkBSEcK7FmseAwY6WytOyeAXfrc31WSSS4nwsOVhuKtqY77gpBebKMJBVKRIEDTMpfdkyy5Kx"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

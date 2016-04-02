@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-02T06:44:14" hostname="cca3c83ae841" time="0.235">
   <properties/>
   <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" time="0.044"/>
@@ -22,6 +23,31 @@ Setting logged in user info for UPDATE
 	bind => [34570740-875C-416C-85E9-400B3055C265]
 [EL Fine]: sql: 2016-04-02 06:44:14.763--ClientSession(880558755)--Connection(432729881)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Language_M WHERE ((languageId = ?) AND (versionId = ?))
 	bind => [34570740-875C-416C-85E9-400B3055C265, 2]
+=======
+<testsuite name="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-01T14:54:19" hostname="be9119dbb530" time="0.225">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" time="0.027"/>
+  <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" time="0.014"/>
+  <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" time="0.004"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" time="0.169"/>
+  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.location.LanguageTestCase" time="0.009"/>
+  <system-out><![CDATA[Setting logged in user info for ADD
+[EL Fine]: sql: 2016-04-01 14:54:19.069--ClientSession(1877017165)--Connection(46030963)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Language_M (languageId, alpha2, alpha3, alpha4, alpha4parentid, language, languageDescription, languageIcon, languageType, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [F49A24FA-97A9-4D3C-8BB8-29D7E709734E, 6o, Q7w, YIht, 8, 4JKfXT9Dj63c8NAvOPBtFGJLv3U7J1Do4PwJWYkAE0z6Z111tX, j74qjG0vu0YW8XS4678mLNhhdbqRXdzXe5CPROqQ2mMfYAFn0J, 5Li8RA4kTYKvFZPbozsMDtAkV9hfRDEWJNJ0AcPLQCKB4RkV3H, 19A8WfnSN1KOPnakM1qdMN6cwmQdCFSf, 1, AAAAA, 2016-04-01 14:54:19.064, null, 2016-04-01 14:54:19.064, 1, 51000]
+[EL Fine]: sql: 2016-04-01 14:54:19.076--ClientSession(412663597)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT languageId, alpha2, alpha3, alpha4, alpha4parentid, language, languageDescription, languageIcon, languageType, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Language_M WHERE ((activeStatus = ?) AND (languageId = ?))
+	bind => [1, F49A24FA-97A9-4D3C-8BB8-29D7E709734E]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-04-01 14:54:19.082--ClientSession(1968831730)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT languageId, alpha2, alpha3, alpha4, alpha4parentid, language, languageDescription, languageIcon, languageType, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Language_M WHERE (languageId = ?)
+	bind => [F49A24FA-97A9-4D3C-8BB8-29D7E709734E]
+[EL Fine]: sql: 2016-04-01 14:54:19.084--ClientSession(1968831730)--Connection(46030963)--Thread(Thread[Test worker,5,main])--UPDATE ast_Language_M SET alpha2 = ?, alpha3 = ?, alpha4 = ?, alpha4parentid = ?, language = ?, languageDescription = ?, languageIcon = ?, languageType = ?, updatedBy = ?, versionId = ? WHERE ((languageId = ?) AND (versionId = ?))
+	bind => [Ts, LUJ, vRzk, 5, 8iEUJiijVPjb3CBPJZAdstJTWd3J6C8z9zSeKgNcN9wlt9ZJW3, ZZcoJ3RbiVYbtbWBNx9aUTAk1KVDFRJXwYNG6qub2Jb88Cs9lV, yQogh4MZtq60oKejLTmtRURj1fApagPdcmF7UiGeCYiXRe0V6G, QHOqkaHy3HmlXs7M3cFVf8gwRTAeM1Th, AAAAA, 2, F49A24FA-97A9-4D3C-8BB8-29D7E709734E, 1]
+[EL Fine]: sql: 2016-04-01 14:54:19.091--ClientSession(887643449)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT languageId, alpha2, alpha3, alpha4, alpha4parentid, language, languageDescription, languageIcon, languageType, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Language_M WHERE ((activeStatus = ?) AND (languageId = ?))
+	bind => [1, F49A24FA-97A9-4D3C-8BB8-29D7E709734E]
+[EL Fine]: sql: 2016-04-01 14:54:19.266--ClientSession(2067597745)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT languageId, alpha2, alpha3, alpha4, alpha4parentid, language, languageDescription, languageIcon, languageType, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Language_M WHERE (languageId = ?)
+	bind => [F49A24FA-97A9-4D3C-8BB8-29D7E709734E]
+[EL Fine]: sql: 2016-04-01 14:54:19.268--ClientSession(2067597745)--Connection(46030963)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Language_M WHERE ((languageId = ?) AND (versionId = ?))
+	bind => [F49A24FA-97A9-4D3C-8BB8-29D7E709734E, 2]
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.organizationboundedcontext.location.Language.language may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.organizationboundedcontext.location.Language.language may not be null

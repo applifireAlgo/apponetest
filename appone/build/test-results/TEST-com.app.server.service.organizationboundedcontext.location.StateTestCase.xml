@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="com.app.server.service.organizationboundedcontext.location.StateTestCase" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-04-02T06:44:14" hostname="cca3c83ae841" time="0.203">
   <properties/>
   <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.location.StateTestCase" time="0.051"/>
@@ -31,6 +32,40 @@ Setting logged in user info for UPDATE
 	bind => [70AF29A4-2AD8-4098-BB8A-587D46C249BA]
 [EL Fine]: sql: 2016-04-02 06:44:14.42--ClientSession(194949449)--Connection(432729881)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Country_M WHERE ((countryId = ?) AND (versionId = ?))
 	bind => [70AF29A4-2AD8-4098-BB8A-587D46C249BA, 1]
+=======
+<testsuite name="com.app.server.service.organizationboundedcontext.location.StateTestCase" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-04-01T14:54:18" hostname="be9119dbb530" time="0.182">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.organizationboundedcontext.location.StateTestCase" time="0.036"/>
+  <testcase name="test2Update" classname="com.app.server.service.organizationboundedcontext.location.StateTestCase" time="0.017"/>
+  <testcase name="test3FindById" classname="com.app.server.service.organizationboundedcontext.location.StateTestCase" time="0.005"/>
+  <testcase name="test3findBycountryId" classname="com.app.server.service.organizationboundedcontext.location.StateTestCase" time="0.006"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.organizationboundedcontext.location.StateTestCase" time="0.103"/>
+  <testcase name="test6Delete" classname="com.app.server.service.organizationboundedcontext.location.StateTestCase" time="0.015"/>
+  <system-out><![CDATA[[EL Fine]: sql: 2016-04-01 14:54:18.796--ClientSession(398904349)--Connection(46030963)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Country_M (countryId, capital, capitalLatitude, capitalLongitude, countryCode1, countryCode2, countryFlag, countryName, currencyCode, currencyName, currencySymbol, isoNumeric, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [8C76D852-4EDC-4A31-BFB8-2DB044C3CCCE, IRMnSHH00HEtAvhImJEB8m0zrcXZ9uOX, 7, 4, S54, 26R, RBNpAfG9QIRQnTYeNZxq8YW9gmA0jEkiiMpNCVeruPI9KZo3Tn, 27ZXvxyCSg9H1gVnOpQM0q8YZiwE8jz0Ne4HneZrxo338uJzTo, Ncf, AlldwWazr8sCv9NmYM1q6PmUMSgXXFOfg8wPIlJdGkglBpFFxQ, 2LutYjQoNqlGQ1zlkZXmgIFo5kSCf8vA, 157, 1, AAAAA, 2016-04-01 14:54:18.789, null, 2016-04-01 14:54:18.789, 1, 51000]
+Setting logged in user info for ADD
+[EL Fine]: sql: 2016-04-01 14:54:18.804--ClientSession(633526873)--Connection(46030963)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_State_M (stateId, countryId, stateCapital, stateCapitalLatitude, stateCapitalLongitude, stateCode, stateCodeChar2, stateCodeChar3, stateDescription, stateFlag, stateName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [53850470-1E64-4006-A2BF-7585F8B83F19, 8C76D852-4EDC-4A31-BFB8-2DB044C3CCCE, LOcWcmiJ8SY7mgJivUNWgEr2FtsAIBG6NQTfe5SE4Ql4su2XyJ, 8, 1, 2, 15I2CMO7126QhDVO44r0xOIRn8m2wB7y, OFcB61V4rzIYv4C7aHqtEMMuCTeNHb8J, PvD5RyrfQSBD4leeiSweYFtGAGuUD1f4IOxr8cNspTtCvWBzR7, uQ1kok6hYV2hHvN9qho3OHTLiaLei7qkFPi2v0Rys15IckUjmi, zRnLSFJtnSajkqOSoFJUf82q6Bk9BHDPA1aYTra0fBfVE5LmxQ, 1, AAAAA, 2016-04-01 14:54:18.799, null, 2016-04-01 14:54:18.799, 1, 51000]
+[EL Fine]: sql: 2016-04-01 14:54:18.812--ClientSession(1310676481)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT stateId, countryId, stateCapital, stateCapitalLatitude, stateCapitalLongitude, stateCode, stateCodeChar2, stateCodeChar3, stateDescription, stateFlag, stateName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_State_M WHERE ((activeStatus = ?) AND (stateId = ?))
+	bind => [1, 53850470-1E64-4006-A2BF-7585F8B83F19]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-04-01 14:54:18.82--ClientSession(845393926)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT stateId, countryId, stateCapital, stateCapitalLatitude, stateCapitalLongitude, stateCode, stateCodeChar2, stateCodeChar3, stateDescription, stateFlag, stateName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_State_M WHERE (stateId = ?)
+	bind => [53850470-1E64-4006-A2BF-7585F8B83F19]
+[EL Fine]: sql: 2016-04-01 14:54:18.822--ClientSession(845393926)--Connection(46030963)--Thread(Thread[Test worker,5,main])--UPDATE ast_State_M SET stateCapital = ?, stateCapitalLatitude = ?, stateCapitalLongitude = ?, stateCodeChar2 = ?, stateCodeChar3 = ?, stateDescription = ?, stateFlag = ?, stateName = ?, updatedBy = ?, versionId = ? WHERE ((stateId = ?) AND (versionId = ?))
+	bind => [gyQ1tY8EhPC7uRew8AEwpNxeieuor1cHNREnmsKELO7Y7Nol4R, 3, 5, Y9XtULSSfpskIILYHe8De5z7UCSKzxXr, Xx4avcqDbykcWqBlBM5ymQQ72ep9QrSz, BnO7CVFEsa7TK6P3ZlPCOxtZua7TNq0brdxlufjdVTeGIKCU4I, UiqjUmSHkwQCOxeJqn2MxQFDOVpSPsyIikpuEO510uuBXIa0Yi, nkN0AOkUnkTuUBgmeoxNhAGBUtxi7Sjypf1WXdyo1DEDS953Kv, AAAAA, 2, 53850470-1E64-4006-A2BF-7585F8B83F19, 1]
+[EL Fine]: sql: 2016-04-01 14:54:18.828--ClientSession(1161080735)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT stateId, countryId, stateCapital, stateCapitalLatitude, stateCapitalLongitude, stateCode, stateCodeChar2, stateCodeChar3, stateDescription, stateFlag, stateName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_State_M WHERE ((activeStatus = ?) AND (stateId = ?))
+	bind => [1, 53850470-1E64-4006-A2BF-7585F8B83F19]
+[EL Fine]: sql: 2016-04-01 14:54:18.833--ClientSession(1386132660)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT stateId, countryId, stateCapital, stateCapitalLatitude, stateCapitalLongitude, stateCode, stateCodeChar2, stateCodeChar3, stateDescription, stateFlag, stateName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_State_M WHERE ((activeStatus = ?) AND (countryId = ?))
+	bind => [1, 8C76D852-4EDC-4A31-BFB8-2DB044C3CCCE]
+[EL Fine]: sql: 2016-04-01 14:54:18.943--ClientSession(1765925811)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT stateId, countryId, stateCapital, stateCapitalLatitude, stateCapitalLongitude, stateCode, stateCodeChar2, stateCodeChar3, stateDescription, stateFlag, stateName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_State_M WHERE (stateId = ?)
+	bind => [53850470-1E64-4006-A2BF-7585F8B83F19]
+[EL Fine]: sql: 2016-04-01 14:54:18.945--ClientSession(1765925811)--Connection(46030963)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_State_M WHERE ((stateId = ?) AND (versionId = ?))
+	bind => [53850470-1E64-4006-A2BF-7585F8B83F19, 2]
+[EL Fine]: sql: 2016-04-01 14:54:18.949--ClientSession(454117441)--Connection(46030963)--Thread(Thread[Test worker,5,main])--SELECT countryId, capital, capitalLatitude, capitalLongitude, countryCode1, countryCode2, countryFlag, countryName, currencyCode, currencyName, currencySymbol, isoNumeric, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Country_M WHERE (countryId = ?)
+	bind => [8C76D852-4EDC-4A31-BFB8-2DB044C3CCCE]
+[EL Fine]: sql: 2016-04-01 14:54:18.95--ClientSession(454117441)--Connection(46030963)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Country_M WHERE ((countryId = ?) AND (versionId = ?))
+	bind => [8C76D852-4EDC-4A31-BFB8-2DB044C3CCCE, 1]
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 ]]></system-out>
   <system-err><![CDATA[com.app.shared.organizationboundedcontext.location.State.stateName may not be null
 com.athena.framework.server.exception.biz.SpartanConstraintViolationException: Exception in validating entity /com.app.shared.organizationboundedcontext.location.State.stateName may not be null

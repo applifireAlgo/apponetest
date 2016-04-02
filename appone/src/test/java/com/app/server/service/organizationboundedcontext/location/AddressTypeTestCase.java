@@ -103,6 +103,7 @@ public class AddressTypeTestCase extends EntityTestCriteria {
 
     private AddressType createAddressType(Boolean isSave) throws SpartanPersistenceException, SpartanConstraintViolationException {
         AddressType addresstype = new AddressType();
+<<<<<<< HEAD
         addresstype.setAddressTypeDesc("UtkG7ldIFPK1E2WMIqCW1qUBXFcltURB8CaDYsBkS75ic1x9l4");
         addresstype.setAddressTypeIcon("aUuF19OKyidMFxzzIu0DkPCZMDXJAEKi6Q2rN0Ks7B6ka97uq0");
         addresstype.setAddressType("JvwtNAcx6IElpaiQDGG7yo4g44uQakHovqzzEeapcqVg7rg99G");
@@ -185,6 +186,90 @@ public class AddressTypeTestCase extends EntityTestCriteria {
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "addressType", "G4yiwAQV6S3OQgVslsw5oIHVIOQbZMD75vJse9vKbrsp4C01F1AQAnmNTpLlkt4F5HC0W4DNLNaDvytSh1rz7HcXMXBoBNzPbtGAJ8DtUOXKoinvnPncAEWNxYL4LpmrJ"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "addressTypeDesc", "9QcBQoskqNUYnDu1lfnPlmTM49JCmaw3uqVRVeAPbEz4TL8GRv7byyHTM8k5rj80UaJfe7ubxw9LQfCSyffP5QOfG7MLXzeaeJPefmaV2OrLLRMmS5yZ5pYueKTGdaBIXnCJ43Qeg6ZX44KMSZWqgfLwisnnxtDIVZUeOsJ6DL4gNIDzsO9Bkst6HVWfcWSGE8eGDvEpRwTqRIZ0GIqhWAownmkRmBsdYXcoaoDngZwpDcVAQYQZxbCXUHPfgCiBV"));
         entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "addressTypeIcon", "ZwjNjOi4X2y74uz4lhzZ8NfwVCwCLO6DugEh6FpsIH5n9otsMP1Aw6m7fyZrr6ayLyRQiVnwEbCQynptqtShxqWi1DYOPQO1rAmjx7gRJ2nSDTZrV6XIIOVncFMQ3iCjS"));
+=======
+        addresstype.setAddressTypeDesc("jJ3tJIOBguUNeGhAx4PtjzSl9FscKkdo8aASAvSSLUZG8mw9X4");
+        addresstype.setAddressTypeIcon("wnMqU9gmVtn22ezDsnTUzCymRaixMNrO7MHvPH5WveSuCJ7m6F");
+        addresstype.setAddressType("akSAlHTDLvFMTXJulWaiNRBdduDSXF104HJvLOKZGorYBCMrwM");
+        addresstype.setEntityValidator(entityValidator);
+        return addresstype;
+    }
+
+    @Test
+    public void test1Save() {
+        try {
+            AddressType addresstype = createAddressType(true);
+            addresstype.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);
+            addresstype.isValid();
+            addresstypeRepository.save(addresstype);
+            map.put("AddressTypePrimaryKey", addresstype._getPrimarykey());
+        } catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test2Update() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("AddressTypePrimaryKey"));
+            AddressType addresstype = addresstypeRepository.findById((java.lang.String) map.get("AddressTypePrimaryKey"));
+            addresstype.setVersionId(1);
+            addresstype.setAddressTypeDesc("nKmS8iWIJOXITkmTFMKT4fJV2NQwUzavgkKHNtKrSkHdAJciui");
+            addresstype.setAddressTypeIcon("3DEqQekAXXoQuDLLuyVbc587SU3XKISzpBE8nRD9TJekb7C5ly");
+            addresstype.setAddressType("no8kdKL6LR5E92WURcHTVb0LUkrXCpAWxAOTPZ8Pn1twoYZwjC");
+            addresstype.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
+            addresstypeRepository.update(addresstype);
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (java.lang.Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test3FindById() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("AddressTypePrimaryKey"));
+            addresstypeRepository.findById((java.lang.String) map.get("AddressTypePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void test6Delete() {
+        try {
+            org.junit.Assert.assertNotNull(map.get("AddressTypePrimaryKey"));
+            addresstypeRepository.delete((java.lang.String) map.get("AddressTypePrimaryKey"));
+        } catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {
+            org.junit.Assert.fail(e.getMessage());
+        } catch (Exception e) {
+            org.junit.Assert.fail(e.getMessage());
+        }
+    }
+
+    private void validateAddressType(EntityTestCriteria contraints, AddressType addresstype) throws SpartanIncorrectDataException, SpartanConstraintViolationException, SpartanPersistenceException {
+        if (contraints.getRuleType() == MIN_MAX) {
+            addresstype.isValid();
+        } else if (contraints.getRuleType() == NOT_NULL) {
+            addresstype.isValid();
+        } else if (contraints.getRuleType() == REGEX) {
+            addresstype.isValid();
+        } else if (contraints.getRuleType() == UNIQUE) {
+            addresstypeRepository.save(addresstype);
+        }
+    }
+
+    private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
+        List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
+        entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "addressType", null));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "addressType", "fk4tUHZEYJBOJKRz2iMXWXTio0c7SwlUvUUZKJESTISR0Fpdp40xcn4P9ZQ2d5dyLABsXdzimcmnEipLQpCE6UfHPpdLaZKTpSmcO1ES9HPZsGQaxfItgifv4GTIj9Mh0"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 3, "addressTypeDesc", "Cfn71cbjVi4f0DqAkdbrUSHCzwKIyUENOjpaBBXVbd2N2HtI4NCwtYEBa4S0sTaSJO64s7uBie2yjMrq4nRP6kgiRq2qgsXlPNBuFLOvxz18977xPnbPqLHMLRwNx2szWygQfVTMQ56gH6RKD2mhZEiNQLAVnu3xnEamG2daf2MaGWuMQF4txmzjkN9ifDOf0OujDY0Mmr5Qev8PU2WlR0Xl0psMwQHDSOVerIDGUQw0SY1GHvwAnHnqmj9s52siF"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 4, "addressTypeIcon", "SgNZst4M4Q5HinxM0PpjTpkAkcvWfnORsxNhxB731U3Sk6iPhkwlIp3jUrMCRAHC01Vtgjw7jNP3wr938VV2X67vaLGyHo6y6NHtcMlIiVJjKGbkl5N7GmDyq7feTxHmi"));
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
         return entityContraints;
     }
 

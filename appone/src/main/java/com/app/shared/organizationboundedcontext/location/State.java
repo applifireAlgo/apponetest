@@ -32,7 +32,11 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_State_M")
 @Entity
 @Cache(type = CacheType.CACHE, isolation = CacheIsolationType.ISOLATED)
+<<<<<<< HEAD
 @SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "deepali.arvnd@algorhythm.co.in", versionNumber = "2", comments = "State", complexity = Complexity.LOW)
+=======
+@SourceCodeAuthorClass(createdBy = "deepali.arvnd@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "State", complexity = Complexity.LOW)
+>>>>>>> branch 'master' of https://github.com/applifireAlgo/apponetest.git
 @NamedQueries({ @javax.persistence.NamedQuery(name = "State.DefaultFinders", query = "select e from State e where e.systemInfo.activeStatus=1 and e.countryId LIKE :countryId and e.stateName LIKE :stateName and e.stateCode BETWEEN :minstateCode AND :maxstateCode and e.stateCodeChar2 LIKE :stateCodeChar2 and e.stateCodeChar3 LIKE :stateCodeChar3"), @javax.persistence.NamedQuery(name = "State.findByCountryId", query = "select e from State e where e.systemInfo.activeStatus=1 and e.countryId=:countryId"), @javax.persistence.NamedQuery(name = "State.findById", query = "select e from State e where e.systemInfo.activeStatus=1 and e.stateId =:stateId") })
 public class State implements Serializable, CommonEntityInterface, Comparator<State> {
 
